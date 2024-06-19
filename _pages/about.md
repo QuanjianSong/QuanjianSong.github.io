@@ -28,5 +28,5 @@ Hi，👋! My name is Quanjian Song (宋泉鉴), I am currently a master student
 🏆 Honors & Awards
 ======
 - First Prize in National Undergraduate Mathematical Modeling Contest, 2021.
-- First Prize in 2023 National College Student Service Outsourcing Competition, 2023.
+- First Prize in National College Student Service Outsourcing Competition, 2023.
 - Outstanding graduates in Zhejiang University of Technology, 2024.
