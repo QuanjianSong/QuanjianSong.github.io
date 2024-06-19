@@ -11,15 +11,18 @@ My name is Quanjian Song (宋泉鉴) and I am currently a master student at Depa
 
 News
 ======
-
+- 2024.06, I am honored to have been awarded the Outstanding Graduates.
+- 2023.08, I won the first prize in the National College Student Service Outsourcing Competition.
+- 2021.11, I won the first prize in the National Undergraduate Mathematical Modeling Competition.
 
 
 Publications
 ======
+- None
 
 
 Honors & Awards
 ======
-- First Prize in 2021 National Undergraduate Mathematical Modeling Contest.
-- First Prize in 2023 National College Student Service Outsourcing Competition.
-- 2024 Outstanding graduates in Zhejiang University of Technology.
+- First Prize in National Undergraduate Mathematical Modeling Contest, 2021.
+- First Prize in 2023 National College Student Service Outsourcing Competition, 2023.
+- Outstanding graduates in Zhejiang University of Technology, 2024.
