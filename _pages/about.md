@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Quanjian Song (宋泉鉴) and I am currently a Ph.D. student at the College of Computer Science and Technology, Zhejiang University, co-supervised by Prof. Jian Wu and Dr. Jintai Chen. Before that, I got my B.Sc. degree from the School of Mathematics and Statistics, Central China Normal University,
+My name is Quanjian Song (宋泉鉴) and I am currently a master student at Department of Computer Science and Technology, Xiamen University. In addition, I am a member of the [MAC Laboratory](https://mac.xmu.edu.cn/) and studied under Professor Liujuan Cao
 
 A data-driven personal website
 ======
