@@ -9,19 +9,19 @@ redirect_from:
 
 My name is Quanjian Song (宋泉鉴) and I am currently a master student at Department of Computer Science and Technology, Xiamen University. In addition, I am a member of the [MAC Laboratory](https://mac.xmu.edu.cn/) and studied under Professor Liujuan Cao.
 
-News
+❗️News
 ======
-- 2024.06, I am honored to have been awarded the Outstanding Graduates.
-- 2023.08, I won the first prize in the National College Student Service Outsourcing Competition.
-- 2021.11, I won the first prize in the National Undergraduate Mathematical Modeling Competition.
+- 🔥 2024.06, I am honored to have been awarded the Outstanding Graduates.
+- 🔥 2023.08, I won the first prize in the National College Student Service Outsourcing Competition.
+- 🔥 2021.11, I won the first prize in the National Undergraduate Mathematical Modeling Competition.
 
 
-Publications
+✍️ Publications
 ======
 - None
 
 
-Honors & Awards
+🏆 Honors & Awards
 ======
 - First Prize in National Undergraduate Mathematical Modeling Contest, 2021.
 - First Prize in 2023 National College Student Service Outsourcing Competition, 2023.
