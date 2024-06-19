@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-Hi，👋! My name is Quanjian Song (宋泉鉴), I am currently a master student at Department of Computer Science and Technology, Xiamen University. In addition, I am a member of the [MAC Laboratory](https://mac.xmu.edu.cn/) and studied under Professor Liujuan Cao.
+Hi👋, my name is Quanjian Song (宋泉鉴), I am currently a master student at Department of Computer Science and Technology, Xiamen University. In addition, I am also a member of the [MAC Laboratory](https://mac.xmu.edu.cn/) and studied under Professor Liujuan Cao. 
+I mainly focus on Deep Leanring in AIGC, diffusion for image, video generation. 
 
 ❗️News
 ======
