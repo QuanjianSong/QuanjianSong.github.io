@@ -20,6 +20,10 @@ My name is Quanjian Song (宋泉鉴) and I am currently a master student at Depa
 ======
 - None
 
+💻 Projects
+======
+- Development and testing of MindSpore‘s GPU Operator 'LuUnpack'，2022.
+
 
 🏆 Honors & Awards
 ======
