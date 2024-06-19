@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-My name is Quanjian Song (宋泉鉴) and I am currently a master student at Department of Computer Science and Technology, Xiamen University. In addition, I am a member of the [MAC Laboratory](https://mac.xmu.edu.cn/) and studied under Professor Liujuan Cao
+My name is Quanjian Song (宋泉鉴) and I am currently a master student at Department of Computer Science and Technology, Xiamen University. In addition, I am a member of the [MAC Laboratory](https://mac.xmu.edu.cn/) and studied under Professor Liujuan Cao.
 
 A data-driven personal website
 ======
