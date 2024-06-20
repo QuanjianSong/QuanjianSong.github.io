@@ -21,7 +21,7 @@ repository               : "QuanjianSong/QuanjianSong.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "94737338.png"
+  avatar           : "my_pic.png"
   name             : "Quanjian Song"
   pronouns         : # example: "she/her"  
   bio              : "A Master student of MAC Laboratory at Xiamen University"
