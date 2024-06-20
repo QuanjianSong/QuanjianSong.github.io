@@ -23,7 +23,7 @@ I mainly focus on Deep Leanring in AIGC, diffusion for image, video generation.
 
 💻 Projects
 ======
-- The crowd intelligence project of [Huawei‘s MindSpore](https://www.mindspore.cn/) , development and testing of GPU operator 'LuUnpck', 2022
+- The crowd intelligence project of [Huawei‘s MindSpore](https://www.mindspore.cn/) , development and testing of GPU operator 'LuUnpack', 2022
 
 🏆 Honors & Awards
 ======
