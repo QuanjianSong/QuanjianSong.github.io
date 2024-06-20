@@ -13,8 +13,8 @@ I mainly focus on Deep Leanring in AIGC, diffusion for image, video generation.
 ❗️News
 ======
 - 🔥 2024.06, I am honored to have been awarded the Outstanding Graduates.
-- 🔥 2023.08, I won the first prize in the National College Student Service Outsourcing Competition.
-- 🔥 2021.11, I won the first prize in the National Undergraduate Mathematical Modeling Competition.
+- 🔥 2023.08, I won the first prize in the College Students’ Innovation and Entrepreneurship Competition.
+- 🔥 2021.11, I won the first prize in the Mathematical Contest in Modeling(MCM).
 
 
 ✍️ Publications
@@ -28,6 +28,6 @@ I mainly focus on Deep Leanring in AIGC, diffusion for image, video generation.
 
 🏆 Honors & Awards
 ======
-- First Prize in National Undergraduate Mathematical Modeling Contest, 2021.
-- First Prize in National College Student Service Outsourcing Competition, 2023.
-- Outstanding graduates in Zhejiang University of Technology, 2024.
+- First prize in the [Mathematical Contest in Modeling(MCM)](http://www.mcm.edu.cn/), 2021.
+- First prize in the [College Students’ Innovation and Entrepreneurship Competition](http://www.fwwb.org.cn/), 2023.
+- Outstanding Graduates in Zhejiang University of Technology, 2024.
