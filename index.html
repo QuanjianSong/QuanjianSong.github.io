@@ -1,54 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>Yiwei Ma - Xiamen University</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quanjian Song</title>
+  <style>
+    body { font-family: Georgia, serif; max-width: 900px; margin: auto; padding: 30px; line-height: 1.6; }
+    img { border-radius: 20px; max-width: 180px; }
+    h1, h2 { font-weight: bold; }
+    a { text-decoration: none; color: #0044cc; }
+    .container { display: flex; gap: 40px; }
+    .left { flex: 1; text-align: center; }
+    .right { flex: 2; }
+    .publication { margin-bottom: 30px; display: flex; gap: 15px; }
+    .publication img { width: 140px; height: auto; border: 1px solid #ccc; }
+    .pub-info { flex: 1; }
+    .buttons a { margin-right: 10px; padding: 3px 8px; border: 1px solid #ccc; font-size: 12px; }
+    .year { margin-top: 30px; font-size: 18px; font-weight: bold; }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="assets/profile.jpg" alt="Yiwei Ma" class="profile-pic">
-        <h1>Quanjian Song</h1>
-        <h2>Second-year Ph. D Student at Xiamen University</h2>
-        <p>Email: yiweima@stu.xmu.edu.cn | 
-           <a href="#">[GitHub]</a> | 
-           <a href="#">[Google Scholar]</a>
-        </p>
-    </header>
 
-    <nav>
-        <a href="#bio">Biography</a> |
-        <a href="#publications">Publications</a> |
-        <a href="#projects">Projects</a> |
-        <a href="#awards">Awards</a>
-    </nav>
+  <div class="container">
+    <div class="left">
+      <img src="YOUR_IMAGE.png" alt="Quanjian Song"/>
+      <h1>Quanjian Song</h1>
+      <p>Master</p>
+      <p><a href="https://YOUR_UNIVERSITY_LINK">Your University</a></p>
+      <p>
+        <a href="https://scholar.google.com">📖</a>
+        <a href="https://github.com/QuanjianSong">🐱</a>
+      </p>
+    </div>
 
-    <section id="bio">
-        <h2>Biography</h2>
-        <p>I am currently a second-year Ph.D student in <a href="#">Xiamen University</a>, advised by <a href="#">Prof. Rongrong Ji</a> and <a href="#">Prof. Xiaoshuai Sun</a>.</p>
-        <ul>
-            <li>09/2023 – Now: Ph.D, Xiamen University</li>
-            <li>09/2020 – 06/2023: M.S., Xiamen University</li>
-            <li>12/2021 – 05/2022: Intern, Alibaba DAMO Academy</li>
-        </ul>
-    </section>
 
-    <section id="publications">
-        <h2>Publications</h2>
-        <ul>
-            <li>
-                <b>Yiwei Ma</b>, Jiayi Ji, Xiaoshuai Sun*, et al.  
-                <i>Image Captioning via Dynamic Path Customization</i>, TNNLS 2024.  
-                [<a href="#">PDF</a>] [<a href="#">arXiv</a>] [<a href="#">Code</a>]
-            </li>
-            <!-- 更多论文 -->
-        </ul>
-    </section>
+    <div class="right">
+      <h2 style="color: #00bfff;">Biography</h2>
+      <p>
+        Your introduction
+      </p>
 
-    <!-- 可添加 Projects、Awards、Activities 等 -->
-    
-    <footer>
-        <p>Last updated: May 2025</p>
-    </footer>
+      <h2>Publications</h2>
+      <div class="year">2025</div>
+      <div class="publication">
+        <img src="your_image_1.png" alt="Paper 1">
+        <div class="pub-info">
+          <a href="#">Your Paper Title</a><br>
+          <span>Quanjian Song, Coauthor 1, Coauthor 2<br>
+          <i>Conference Name, Month Year</i></span><br>
+          <div class="buttons">
+            <a href="#">PDF</a>
+            <a href="#">Code</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
 </body>
 </html>
