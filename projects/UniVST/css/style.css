@@ -108,7 +108,7 @@ body {
   
 
   .bibtex-block {
-    width: 70%;               /* ✅ 缩小整体宽度，和摘要统一 */
+    width: 50%;               /* ✅ 缩小整体宽度，和摘要统一 */
     margin: 0px auto;
   }
   
