@@ -50,7 +50,7 @@ body {
   .btn {
     display: inline-block;
     padding: 8px 14px;
-    margin: 5px 15px; /* 上下 5px，左右 15px */
+    margin: 5px 40px; /* 上下 5px，左右 15px */
     background-color: #333;
     color: white;
     text-decoration: none;
@@ -60,12 +60,12 @@ body {
   }
   
   
-  
   .tldr {
+    display: block; 
     text-align: left;
-    max-width: 60%;
+    max-width: 50%;
     margin: 10px auto;  /* 上下间距10px，居中 */
-    color: #3333336d;
+    color: #33333396;
     line-height: 1.5;
     font-size: 15px;        /* 可选：稍微调小字体 */
   }
