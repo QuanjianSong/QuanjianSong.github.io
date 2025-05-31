@@ -5,18 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quanjian Song</title>
   <style>
-    body { font-family: Georgia, serif; max-width: 900px; margin: auto; padding: 30px; line-height: 1.6; }
-    img { border-radius: 20px; max-width: 180px; }
-    h1, h2 { font-weight: bold; }
-    a { text-decoration: none; color: #0044cc; }
-    .container { display: flex; gap: 40px; }
-    .left { flex: 1; text-align: center; }
-    .right { flex: 2; }
-    .publication { margin-bottom: 30px; display: flex; gap: 15px; }
-    .publication img { width: 140px; height: auto; border: 1px solid #ccc; }
-    .pub-info { flex: 1; }
-    .buttons a { margin-right: 10px; padding: 3px 8px; border: 1px solid #ccc; font-size: 12px; }
-    .year { margin-top: 30px; font-size: 18px; font-weight: bold; }
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 40px 60px;
+      line-height: 1.6;
+      background-color: #fff;
+    }
+    img {
+      border-radius: 20px;
+      max-width: 180px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-weight: bold;
+      color: #4682b4; /* 潜蓝色 */
+      margin-top: 40px;
+      font-size: 24px;
+    }
+    a {
+      text-decoration: none;
+      color: #0044cc;
+    }
+    .container {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+    }
+    .left {
+      flex: 1;
+      text-align: center;
+      min-width: 220px;
+    }
+    .right {
+      flex: 3;
+    }
+    .publication {
+      margin-bottom: 30px;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+    }
+    .publication img {
+      width: 140px;
+      height: auto;
+      border: 1px solid #ccc;
+    }
+    .pub-info {
+      flex: 1;
+    }
+    .buttons a {
+      margin-right: 10px;
+      padding: 4px 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 13px;
+      background-color: #f9f9f9;
+    }
+    .year {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* 响应式布局 */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .left {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 <body>
@@ -33,12 +98,9 @@
       </p>
     </div>
 
-
     <div class="right">
-      <h2 style="color: #00bfff;">Biography</h2>
-      <p>
-        Your introduction
-      </p>
+      <h2>Biography</h2>
+      <p>Your introduction</p>
 
       <h2>Publications</h2>
       <div class="year">2025</div>
@@ -54,7 +116,6 @@
           </div>
         </div>
       </div>
-
 
     </div>
   </div>
