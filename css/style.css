@@ -1,0 +1,94 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 40px 0;
+    line-height: 1.6;
+    background-color: #fff;
+  }
+  
+  .wrapper {
+    width: 75%;
+    margin: 0 auto;
+  }
+  
+  img {
+    border-radius: 20px;
+    max-width: 180px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: #4682b4;
+    margin-top: 40px;
+    font-size: 24px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0044cc;
+  }
+  
+  .container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  
+  .left {
+    flex: 1;
+    text-align: center;
+    min-width: 220px;
+  }
+  
+  .right {
+    flex: 3;
+  }
+  
+  .publication {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .publication img {
+    width: 140px;
+    height: auto;
+    border: 1px solid #ccc;
+  }
+  
+  .pub-info {
+    flex: 1;
+  }
+  
+  .buttons a {
+    margin-right: 10px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #f9f9f9;
+  }
+  
+  .year {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 30px;
+    }
+    .wrapper {
+      width: 90%;
+    }
+  }
+  
