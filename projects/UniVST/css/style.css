@@ -106,3 +106,19 @@ body {
     background-color: #ffffff;
   }
   
+
+  .bibtex-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .bibtex-code {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 12px;
+    overflow-x: auto;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+  }
+  
