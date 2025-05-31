@@ -50,7 +50,7 @@ body {
   .btn {
     display: inline-block;
     padding: 8px 14px;
-    margin: 5px;
+    margin: 5px 15px; /* 上下 5px，左右 15px */
     background-color: #333;
     color: white;
     text-decoration: none;
@@ -59,15 +59,17 @@ body {
     font-weight: 500;
   }
   
+  
+  
   .tldr {
     text-align: left;
-    max-width: 75%;
+    max-width: 60%;
     margin: 10px auto;  /* 上下间距10px，居中 */
-    font-weight: bold;
-    color: #333;
+    color: #3333336d;
     line-height: 1.5;
+    font-size: 15px;        /* 可选：稍微调小字体 */
   }
-  
+
   /* .section {
     padding: 60px 40px;
     text-align: center;
@@ -83,7 +85,7 @@ body {
   .section-title {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     color: #333;
   }
   
