@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Title</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="title">UniVST: A Unified Framework for Training-free Localized Video Style Transfer</h1>
+
+    <div class="authors">
+      <a href="https://github.com/QuanjianSong">Quanjian Song<sup>1</sup></a>,
+      <a href="https://scholar.google.com/citations?user=Dp3L1bsAAAAJ&hl=zh-CN&oi=ao">Mingbao Lin<sup>2</sup></a>,
+      <a href="https://scholar.google.com/citations?hl=zh-CN&user=nnF1s7kAAAAJ">Wengyi Zhan<sup>1</sup></a>,
+      <a href="https://scholar.google.com/citations?user=DNuiPHwAAAAJ&hl=zh-CN&oi=ao">Shuicheng Yan<sup>2</sup></a>,
+      <a href="https://mac.xmu.edu.cn/ljcao/">Liujuan Cao<sup>1</sup></a>,
+      <a href="https://mac.xmu.edu.cn/rrji/">Rongrong Ji<sup>1</sup></a>
+    </div>
+
+    <div class="affiliations">
+      <span><sup>1</sup>Key Laboratory of Multimedia Trusted Perception and Efficient Computing, Ministry of Education of China, Xiamen University, China.</span>
+      <br>
+      <span><sup>2</sup>Kunlun Skywork AI.</span>
+    </div>
+
+    <div class="buttons">
+      <a class="btn" href="https://arxiv.org/abs/2410.20084">📝 Paper</a>
+      <a class="btn" href="https://github.com/QuanjianSong/UniVST">💻 Code</a>
+    </div>
+
+    <p class="tldr">
+        <strong>TL;DR: </strong>
+        We propose UniVST, a unified framework for Localized Video Style Transfer based on diffusion models.  It operates without the
+        need for training, offering a distinct advantage over existing diffusion methods that transfer style across entire videos.
+    </p>
+  
+
+  <div class="abstract-wrapper">
+    <section class="section white">
+        <h2 class="section-title">Abstract</h2>
+        <p class="section-text">
+            This paper presents UniVST, a unified framework for localized video style transfer based on diffusion models. It operates without the
+            need for training, offering a distinct advantage over existing diffusion methods that transfer style across entire videos. The endeavors of this paper
+            comprise: (1) A point-matching mask propagation strategy that leverages the feature maps from the DDIM inversion. This streamlines the model’s
+            architecture by obviating the need for tracking models. (2) A training-free AdaIN-guided localized video stylization mechanism that operates at
+            both the latent and attention levels. This balances content fidelity and style richness, mitigating the loss of localized details commonly associated
+            with direct video stylization. (3) A sliding-window consistent smoothing scheme that harnesses optical flow within the pixel representation and
+            refines predicted noise to update the latent space. This significantly enhances temporal consistency and diminishes artifacts in stylized video.
+            Our proposed UniVST has been validated to be superior to existing methods in quantitative and qualitative metrics. It adeptly addresses the
+            challenges of preserving the primary object's style while ensuring temporal consistency and detail preservation.
+        </p>
+    </section>
+  </div>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{tokenflow2023,
+        title = {TokenFlow: Consistent Diffusion Features for Consistent Video Editing},
+        author = {Geyer, Michal and Bar-Tal, Omer and Bagon, Shai and Dekel, Tali},
+        journal={arXiv preprint arxiv:2307.10373},
+        year={2023}
+        }</code></pre>
+    </div>
+</section>
+
+</body>
+
+
+
+</html>
