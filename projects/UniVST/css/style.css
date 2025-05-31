@@ -13,8 +13,8 @@ body {
   }
 
   .abstract-wrapper {
-    width: 60%;
-    margin: 5px auto;
+    width: 100%;
+    margin: 0px auto;
     text-align: left;
   }
   
@@ -65,7 +65,7 @@ body {
     text-align: left;
     max-width: 50%;
     margin: 10px auto;  /* 上下间距10px，居中 */
-    color: #33333396;
+    color: #333333d2;
     line-height: 1.5;
     font-size: 15px;        /* 可选：稍微调小字体 */
   }
@@ -75,7 +75,7 @@ body {
     text-align: center;
   } */
   .section {
-    padding-top: 10px;
+    padding-top: 15px;
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;
