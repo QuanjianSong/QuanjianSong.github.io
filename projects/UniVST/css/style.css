@@ -90,6 +90,7 @@ body {
   }
   
   .section-text {
+    text-align: justify;  /* 👈 加这一行就可以两端对齐 */
     max-width: 700px;
     margin: 0 auto;
     font-size: 16px;
