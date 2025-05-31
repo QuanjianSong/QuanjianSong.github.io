@@ -13,8 +13,8 @@ body {
   }
 
   .abstract-wrapper {
-    width: 50%;
-    margin: 20px auto;
+    width: 60%;
+    margin: 5px auto;
     text-align: left;
   }
   
@@ -75,10 +75,10 @@ body {
     text-align: center;
   } */
   .section {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
   }
 
