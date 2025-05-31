@@ -60,13 +60,12 @@ body {
   }
   
   .tldr {
-    font-size: 16px;
-    margin-top: 20px;
-    color: #444;
-    line-height: 1.6;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    text-align: left;
+    max-width: 75%;
+    margin: 10px auto;  /* 上下间距10px，居中 */
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
   }
   
   .section {
