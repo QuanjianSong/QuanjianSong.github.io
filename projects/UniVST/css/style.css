@@ -7,7 +7,7 @@ body {
   }
   
   .wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     text-align: center;
   }
@@ -61,5 +61,34 @@ body {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  .section {
+    padding: 60px 40px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .section-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #444;
+    text-align: left;
+  }
+  
+  .gray {
+    background-color: #f4f4f4;
+  }
+  
+  .white {
+    background-color: #ffffff;
   }
   
