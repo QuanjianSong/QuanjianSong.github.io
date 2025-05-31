@@ -116,15 +116,14 @@ body {
   .code-box {
     display: block;
     text-align: left;
-    background: #eee;
-    white-space: pre;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 20px;
+    background-color: #f2f2f2;
+    border-radius: 12px;
     padding: 5px 5px;        /* ✅ 减少 padding，让文字更贴边 */
     overflow-x: auto;
     font-family: "Courier New", monospace;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
+    white-space: pre;
     
   }
   
