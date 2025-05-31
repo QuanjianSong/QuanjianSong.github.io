@@ -112,16 +112,27 @@ body {
     margin: 0px auto;
   }
   
+  " display: block;
+                    
+                    
+                    
+                    -
+                    border-radius: 20px;
+                    font-size: 20px;
+                    "
   .code-box {
-    background-color: #f2f2f2;
-    border-radius: 12px;
+    display: block;
+    text-align: left;
+    background: #eee;
+    white-space: pre;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 20px;
     padding: 5px 5px;        /* ✅ 减少 padding，让文字更贴边 */
     overflow-x: auto;
     font-family: "Courier New", monospace;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
-    white-space: pre;
-    text-align: left;
+    
   }
   
   
