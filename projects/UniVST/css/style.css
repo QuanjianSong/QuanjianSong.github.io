@@ -110,7 +110,6 @@ body {
   .bibtex-block {
     width: 60%;
     margin: 40px auto;
-    text-align: left;
   }
   
   .code-box {
@@ -122,5 +121,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
     white-space: pre;
+    text-align: left; /* 关键：强制内容左对齐 */
   }
+  
   
