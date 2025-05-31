@@ -118,7 +118,7 @@ body {
     padding: 5px 5px;        /* ✅ 减少 padding，让文字更贴边 */
     overflow-x: auto;
     font-family: "Courier New", monospace;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.6;
     white-space: pre;
     text-align: left;
