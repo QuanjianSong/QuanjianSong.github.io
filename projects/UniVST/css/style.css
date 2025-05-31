@@ -65,7 +65,7 @@ body {
     text-align: left;
     max-width: 55%;
     margin: 10px auto;  /* 上下间距10px，居中 */
-    color: #333333e7;
+    color: #333333b7;
     line-height: 1.5;
     font-size: 15px;        /* 可选：稍微调小字体 */
   }
@@ -90,7 +90,7 @@ body {
   }
   
   .section-text {
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     font-size: 16px;
     line-height: 1.7;
@@ -107,18 +107,20 @@ body {
   }
   
 
-  .bibtex-wrapper {
-    width: 80%;
-    margin: 0 auto;
+  .bibtex-block {
+    width: 60%;
+    margin: 40px auto;
+    text-align: left;
   }
   
-  .bibtex-code {
-    background-color: #f0f0f0;
-    padding: 20px;
+  .code-box {
+    background-color: #f2f2f2;
     border-radius: 12px;
+    padding: 20px;
     overflow-x: auto;
     font-family: "Courier New", monospace;
     font-size: 14px;
-    white-space: pre-wrap;
+    line-height: 1.6;
+    white-space: pre;
   }
   
