@@ -63,7 +63,7 @@ body {
   .tldr {
     display: block; 
     text-align: justify;
-    max-width: 50%;
+    max-width: 55%;
     margin: 10px auto;  /* 上下间距10px，居中 */
     color: #333333b7;
     line-height: 1.5;
