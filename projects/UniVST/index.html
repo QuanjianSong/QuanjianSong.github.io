@@ -35,20 +35,20 @@
     <p class="tldr"><strong>TL;DR:</strong> We propose StyleCrafter, a generic method that enhances pre-trained T2V models with style control, supporting Style-Guided Text-to-Image Generation and Style-Guided Text-to-Video Generation.</p>
   
 
-  <div class="wrapper">
+  <div class="abstract-wrapper">
     <section class="section gray">
         <h2 class="section-title">Abstract</h2>
         <p class="section-text">
-          Text-to-video (T2V) models have shown remarkable capabilities in generating diverse videos.
-          However, they struggle to produce user-desired stylized videos due to (i) text's inherent clumsiness in expressing specific styles and (ii) the generally degraded style fidelity.
-          To address these challenges, we introduce StyleCrafter, a generic method that enhances pre-trained T2V models with a style control adapter, enabling video generation in any style by providing a reference image.
-          <br><br>
-          Considering the scarcity of stylized video datasets, we propose to first train a style control adapter using style-rich image datasets, then transfer the learned stylization ability to video generation through a tailor-made finetuning paradigm.
-          To promote content-style disentanglement, we remove style descriptions from the text prompt and extract style information solely from the reference image using a decoupling learning strategy.
-          <br><br>
-          Additionally, we design a scale-adaptive fusion module to balance the influences of text-based content features and image-based style features, which helps generalization across various text and style combinations.
-          StyleCrafter efficiently generates high-quality stylized videos that align with the content of the texts and resemble the style of the reference images.
-          Experiments demonstrate that our approach is more flexible and efficient than existing competitors.
+            This paper presents UniVST, a unified framework for localized video style transfer based on diffusion models. It operates without the
+            need for training, offering a distinct advantage over existing diffusion methods that transfer style across entire videos. The endeavors of this paper
+            comprise: (1) A point-matching mask propagation strategy that leverages the feature maps from the DDIM inversion. This streamlines the model’s
+            architecture by obviating the need for tracking models. (2) A training-free AdaIN-guided localized video stylization mechanism that operates at
+            both the latent and attention levels. This balances content fidelity and style richness, mitigating the loss of localized details commonly associated
+            with direct video stylization. (3) A sliding-window consistent smoothing scheme that harnesses optical flow within the pixel representation and
+            refines predicted noise to update the latent space. This significantly enhances temporal consistency and diminishes artifacts in stylized video.
+            Our proposed UniVST has been validated to be superior to existing methods in quantitative and qualitative metrics. It adeptly addresses the
+            challenges of preserving the primary object's style while ensuring temporal consistency and detail preservation. Our code is available at:
+            <a href="https://github.com/QuanjianSong/UniVST" target="_blank">https://github.com/QuanjianSong/UniVST.</a>
         </p>
       </section>
   </div>
