@@ -34,6 +34,8 @@
   <link rel="stylesheet"
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
@@ -109,9 +111,14 @@
                                 <span>Hugging Face</span>
                                 </a>
                             </span>
-                            </div>
                         </div>
                     </div>
+                    <!-- TL;DR: -->
+                    <h2 class="content has-text-justified">
+                        <b>TL;DR: </b> 
+                        We presents UniVST, a unified framework for localized video style transfer based on diffusion models.
+                        It operates without the need for training, offering a distinct advantage over existing diffusion methods that transfer style across entire videos.
+                    </h2>
                 </div>
             </div>
         </div>
@@ -218,8 +225,8 @@
                       </th>
                       <th style="font-size: 16px; text-align: left;">Ours</th>
                       <tr>
-                        <td><a href="sm/assets/stylepic/anime_2.jpg"> <img style="height: 200px;" class="center"
-                              src="sm/assets/stylepic/anime_2.jpg" alt=""></a></td>
+                        <td><a href="static/images/carousel1.jpg"> <img style="height: 200px;" class="center"
+                              src="static/images/carousel1.jpg" alt=""></a></td>
                         <td><a href="sm/assets/depth_control/depth/depth_1.mp4"><video style="height: 200px;"
                               src="sm/assets/depth_control/depth/depth_1.mp4" autoplay loop controls muted /> ></video></a>
                         </td>
@@ -229,8 +236,8 @@
                               src="sm/assets/depth_control/ours/1.mp4" autoplay loop controls muted /> ></video></a></td>
                       </tr>
                       <tr>
-                        <td><a href="sm/assets/stylepic/digital_art_1.jpg"> <img style="height: 200px;" class="center"
-                              src="sm/assets/stylepic/digital_art_1.jpg" alt=""></a></td>
+                        <td><a href="static/images/carousel1.jpg"> <img style="height: 200px;" class="center"
+                              src="static/images/carousel1.jpg" alt=""></a></td>
                         <td><a href="sm/assets/depth_control/depth/depth_1.mp4"><video style="height: 200px;"
                               src="sm/assets/depth_control/depth/depth_1.mp4" autoplay loop controls muted /> ></video></a>
                         </td>
@@ -290,146 +297,156 @@
   <!-- End video grid multi ref -->
 
 
-<!-- video preload="auto"carousel -->
-<section class="hero is-small is-light">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered has-text-centered">
-          <div class="column custom-width">
-            <h2 class="title is-3">Comparisons</h2>
-            <div class="content has-text-justified">
-              <div class="caption-container" style="width: 1200px; padding-left: 50px">
-                <div class="caption">
-                  <p>Input video</p>
-                </div>
-                <div class="caption">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ours</p>
-                </div>
-                <div class="caption">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text-to-video <a href="#ref-txt2vid">[1]</a></p>
-                </div>
-                <div class="caption">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Tune-a-video <a href="#ref-TAV">[2]</a></p>
-                </div>
-                <div class="caption">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gen-1 <a href="#ref-gen1">[3]</a></p>
-                </div>
-                <div class="caption">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Per frame PnP<a href="#ref-pnp">[4]</a></p>
-                </div>
-                <div class="caption">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fate-Zero<a href="#ref-fatezero">[5]</a></p>
-                </div>
-                <div class="caption">
-                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rerender-a-video<a href="#ref-rerender">[6]</a></p>
-                </div>
-                
-                <!-- Add remaining captions here  -->
-              </div>
-        <div id="results-carousel" class="carousel results-carousel" align="center">
-          <div class="item item-video1">
-             <!-- Add caption element for each video preload="auto"-->
-            <video preload="auto"poster="" id="video11" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="static/videos/banner_video.mp4"
-              type="video/mp4">
-            </video>
-            <video preload="auto"poster="" id="video12" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/bread/result_fps_20.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video13" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/bread/txt2vid_fps20.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video14" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/bread/tav_fps20.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video15" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/bread/gen1_fps20.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video16" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/bread/pnp_per_frame_baseline_fps_20.mp4"
-              type="video/mp4">
-            </video>
-            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="./sm/assets/bread/a shiny metal scultpture/fatezero_20_fps.mp4"
-              type="video/mp4">
-            </video>
-            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="./sm/assets/bread/a shiny metal scultpture/rerender_fps_20.mp4"
-              type="video/mp4">
-            </video>
-          </div>
-          
-          <div class="item item-video2">
-            
-            <video preload="auto"poster="" id="video1" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/poodle/input_fps30.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video21" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/poodle/result_fps_30.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video22" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/poodle/txt2vid_fps30.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video23" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/poodle/tav_fps30.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video24" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/poodle/gen1_fps30.mp4"
-              type="video/mp4">
-            </video>
-            
-            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="videos/compare/poodle/pnp_per_frame_baseline_fps_30.mp4"
-              type="video/mp4">
-            </video>
-            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="./sm/assets/poodle/a dog with a rainbow texture/fatezero_30_fps.mp4"
-              type="video/mp4">
-            </video>
-            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
-              <!-- Your video preload="auto"file here -->
-              <source src="./sm/assets/poodle/a dog with a rainbow texture/rerender_fps_30.mp4"
-              type="video/mp4">
-            </video>
-          </div>
-          </div>
-        </div>
-      </div>
+
+
+
+<!-- RESULTS SECTION -->
+<section class="hero is-light is-small">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-1 mmmu">Comparison</h1>
     </div>
   </section>
-  <!-- End video preload="auto"carousel -->
-
+  <div class="column">
+              <div class="column has-text-centered">
+                  <p>
+                      AnyV2V can preserve the video fidelity while performing the correct amount of edit.
+                  </p>
+                  <div style="width: 60%; margin: auto;">
+                  <table class="table is-fullwidth is-striped is-hoverable">
+                      <tbody>
+                          <tr>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;">Source</div></td>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;"><b>AnyV2V(Ours)</b></div></td>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;">TokenFlow</div></td>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;">FLATTEN</div></td>
+                          </tr>
+                          <tr>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 100%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/snow/src.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 94%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/snow/v2v_i2vgenxl.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 97%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/snow/tokenflow.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 99%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/snow/flatten.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td style="text-align: center;">
+  
+                                  <video autoplay controls muted loop playsinline style="width: 100%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/man_hat/src.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 94%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/man_hat/v2v_i2vgenxl.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 97%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/man_hat/tokenflow.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 99%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/man_hat/flatten.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td style="text-align: center;">
+  
+                                  <video autoplay controls muted loop playsinline style="width: 100%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/robot_couple/src.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 94%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/robot_couple/v2v_i2vgenxl.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 97%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/robot_couple/tokenflow.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 99%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/robot_couple/flatten.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                          </tr>
+  
+                      </tbody>
+                  </table>
+  
+                  <table class="table is-fullwidth is-striped is-hoverable">
+                      <tbody>
+                          <tr>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;">Source</div></td>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;">Reference</div></td>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;"><b>AnyV2V(Ours)</b></div></td>
+                              <td style="text-align: center;"><div style="margin-bottom: 2px;">VideoSwap</div></td>
+                          </tr>
+                          <tr>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 100%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/V_dog/src.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <img src="static/videos/subject_driven/v-dog.jpg" style="width: 80%; max-width: 250px;" alt="AnyV2V" />
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 97%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/V_dog/v2v_i2vgenxl.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 100%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/V_dog/videoswap.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 100%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/V_dog2/src.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <img src="static/videos/comparison/V_dog2/v-dog-01.jpg" style="width: 80%; max-width: 250px;" alt="AnyV2V" />
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 97%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/V_dog2/v2v_i2vgenxl.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                              <td style="text-align: center;">
+                                  <video autoplay controls muted loop playsinline style="width: 100%; max-width: 250px;">
+                                      <source src="./static/videos/comparison/V_dog2/videoswap.mp4" type="video/mp4">
+                                  </video>
+                              </td>
+                          </tr>
+  
+                      </tbody>
+                  </table>
+                  </div>
+              </div>
+          </div>
+  
 
 
 <!--BibTex citation -->
