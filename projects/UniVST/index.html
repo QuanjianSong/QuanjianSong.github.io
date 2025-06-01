@@ -140,7 +140,7 @@
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Abstract</h2>
+                    <h2 class="title is-2">Abstract</h2>
                     <div class="content has-text-justified">
                         <p>
                             This paper presents UniVST, a unified framework for localized video style transfer based on diffusion models. It operates without the
@@ -152,7 +152,7 @@
                             refines predicted noise to update the latent space. This significantly enhances temporal consistency and diminishes artifacts in stylized video.
                             Our proposed UniVST has been validated to be superior to existing methods in quantitative and qualitative metrics. It adeptly addresses the
                             challenges of preserving the primary object's style while ensuring temporal consistency and detail preservation.
-                            Our code is available at <a href="https://github.com/your-github-url" target="_blank">GitHub.</a>
+                            Our code is available at <a href="https://github.com/QuanjianSong/UniVST " target="_blank" style="color: #3399FF;">GitHub.</a>
                         </p>
                     </div>
                 </div>
@@ -163,59 +163,272 @@
 
 
 
-    <!-- Youtube video -->
-    <section class="hero is-small is-light">
-    <div class="hero-body">
-        <div class="container">
-        <!-- Paper video. -->
-        <h2 class="title is-3">Video Presentation</h2>
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-            
-            <div class="publication-video">
-                <!-- Youtube embed code here -->
-                <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            </div>
+    <!-- Paper method -->
+    <section class="section hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-">
+                        <h2 class="title is-2">Method</h2>
+                        <div class="content has-text-justified">
+                            <td colspan="3">
+                                <p>
+                                    We propose UniVST, a unified framework for training-free localized video style
+                                    transfer based on diffusion models. UniVST
+                                    first applies DDIM inversion to the original video and style image
+                                    to obtain their initial noise and integrates Point-Matching Mask
+                                    Propagation to generate masks for the object regions. It then 
+                                    performs AdaIN-Guided Localized Video Stylization with a threebranch architecture for information interaction. Moreover, SlidingWindow Consistent Smoothing is incorporated into the denoising
+                                    process, enhancing the temporal consistency in the latent space.
+                                    The overall framework is illustrated as follows:
+                                </p>
+                            </td>
+                        </div>
+                <div class="columns is-centered has-text-justified">
+                    <td colspan="3">
+                        <img src="static/images/overall_framework.png" alt="framework" width="1000" />
+                    </td>
+                </div>
+            <p><br></p>
         </div>
-        </div>
-    </div>
     </section>
-    <!-- End youtube video -->
+    <!--End paper poster -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+
+
+
+    <!-- Video grid Extension -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column custom-width">
+            <h2 class="title is-2">Additional Result</h2>
+
+            <h2 class="title is-4"><b style="color:#008AD7; font-weight:normal">&#x25B6 </b> Depth Control</h2>
+            <div class="content has-text-justified">
+              <div id="results-carousel" class="carousel results-carousel" align="center">
+                <div class="item item-video1">
+                  <table>
+                    <tbody>
+                      <th style="font-size: 16px; text-align: left;">Style Reference</th>
+                      <th style="font-size: 16px; text-align: left;">Input Depth </th>
+                      <th style="font-size: 16px; text-align: left;">VideoComposer(<a href="#videocomposer">[1]</a>)
+                      </th>
+                      <th style="font-size: 16px; text-align: left;">Ours</th>
+                      <tr>
+                        <td><a href="sm/assets/stylepic/anime_2.jpg"> <img style="height: 200px;" class="center"
+                              src="sm/assets/stylepic/anime_2.jpg" alt=""></a></td>
+                        <td><a href="sm/assets/depth_control/depth/depth_1.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/depth/depth_1.mp4" autoplay loop controls muted /> ></video></a>
+                        </td>
+                        <td><a href="sm/assets/depth_control/vidCom/1.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/vidCom/1.mp4" autoplay loop controls muted /> ></video></a></td>
+                        <td><a href="sm/assets/depth_control/ours/1.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/ours/1.mp4" autoplay loop controls muted /> ></video></a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="sm/assets/stylepic/digital_art_1.jpg"> <img style="height: 200px;" class="center"
+                              src="sm/assets/stylepic/digital_art_1.jpg" alt=""></a></td>
+                        <td><a href="sm/assets/depth_control/depth/depth_1.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/depth/depth_1.mp4" autoplay loop controls muted /> ></video></a>
+                        </td>
+                        <td><a href="sm/assets/depth_control/vidCom/2.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/vidCom/2.mp4" autoplay loop controls muted /> ></video></a></td>
+                        <td><a href="sm/assets/depth_control/ours/2.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/ours/2.mp4" autoplay loop controls muted /> ></video></a></td>
+                      </tr>
+                      <tr>
+                        <th colspan="4"><p class="prompt_global_vid">"A tiger walks in the forest."</p></th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="item item-video2">
+                  <table>
+                    <tbody>
+                      <th style="font-size: 16px; text-align: left;">Style Reference</th>
+                      <th style="font-size: 16px; text-align: left;">Input Depth </th>
+                      <th style="font-size: 16px; text-align: left;">VideoComposer(<a href="#videocomposer">[1]</a>)
+                      </th>
+                      <th style="font-size: 16px; text-align: left;">Ours</th>
+                      <tr>
+                        <td><a href="sm/assets/stylepic/ink_2.jpg"> <img style="height: 200px;" class="center"
+                              src="sm/assets/stylepic/ink_2.jpg" alt=""></a></td>
+                        <td><a href="sm/assets/depth_control/depth/depth_2.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/depth/depth_2.mp4" autoplay loop controls muted /> ></video></a>
+                        </td>
+                        <td><a href="sm/assets/depth_control/vidCom/3.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/vidCom/3.mp4" autoplay loop controls muted /> ></video></a></td>
+                        <td><a href="sm/assets/depth_control/ours/3.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/ours/3.mp4" autoplay loop controls muted /> ></video></a></td>
+                      </tr>
+                      <tr>
+                        <td><a href="sm/assets/stylepic/oil_paint_2.jpg"> <img style="height: 200px;" class="center"
+                              src="sm/assets/stylepic/oil_paint_2.jpg" alt=""></a></td>
+                        <td><a href="sm/assets/depth_control/depth/depth_2.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/depth/depth_2.mp4" autoplay loop controls muted /> ></video></a>
+                        </td>
+                        <td><a href="sm/assets/depth_control/vidCom/4.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/vidCom/4.mp4" autoplay loop controls muted /> ></video></a></td>
+                        <td><a href="sm/assets/depth_control/ours/4.mp4"><video style="height: 200px;"
+                              src="sm/assets/depth_control/ours/4.mp4" autoplay loop controls muted /> ></video></a></td>
+                      </tr>
+                      <tr>
+                        <th colspan="4"><p class="prompt_global_vid">"A car turning around on a countryside road."</p></th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <p><br></p>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+  </section>
+  <!-- End video grid multi ref -->
+
+
+<!-- video preload="auto"carousel -->
+<section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column custom-width">
+            <h2 class="title is-3">Comparisons</h2>
+            <div class="content has-text-justified">
+              <div class="caption-container" style="width: 1200px; padding-left: 50px">
+                <div class="caption">
+                  <p>Input video</p>
+                </div>
+                <div class="caption">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ours</p>
+                </div>
+                <div class="caption">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Text-to-video <a href="#ref-txt2vid">[1]</a></p>
+                </div>
+                <div class="caption">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;Tune-a-video <a href="#ref-TAV">[2]</a></p>
+                </div>
+                <div class="caption">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gen-1 <a href="#ref-gen1">[3]</a></p>
+                </div>
+                <div class="caption">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Per frame PnP<a href="#ref-pnp">[4]</a></p>
+                </div>
+                <div class="caption">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fate-Zero<a href="#ref-fatezero">[5]</a></p>
+                </div>
+                <div class="caption">
+                  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rerender-a-video<a href="#ref-rerender">[6]</a></p>
+                </div>
+                
+                <!-- Add remaining captions here  -->
+              </div>
+        <div id="results-carousel" class="carousel results-carousel" align="center">
+          <div class="item item-video1">
+             <!-- Add caption element for each video preload="auto"-->
+            <video preload="auto"poster="" id="video11" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="static/videos/banner_video.mp4"
+              type="video/mp4">
+            </video>
+            <video preload="auto"poster="" id="video12" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/bread/result_fps_20.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video13" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/bread/txt2vid_fps20.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video14" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/bread/tav_fps20.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video15" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/bread/gen1_fps20.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video16" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/bread/pnp_per_frame_baseline_fps_20.mp4"
+              type="video/mp4">
+            </video>
+            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="./sm/assets/bread/a shiny metal scultpture/fatezero_20_fps.mp4"
+              type="video/mp4">
+            </video>
+            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="./sm/assets/bread/a shiny metal scultpture/rerender_fps_20.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          
+          <div class="item item-video2">
+            
+            <video preload="auto"poster="" id="video1" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/poodle/input_fps30.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video21" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/poodle/result_fps_30.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video22" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/poodle/txt2vid_fps30.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video23" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/poodle/tav_fps30.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video24" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/poodle/gen1_fps30.mp4"
+              type="video/mp4">
+            </video>
+            
+            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="videos/compare/poodle/pnp_per_frame_baseline_fps_30.mp4"
+              type="video/mp4">
+            </video>
+            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="./sm/assets/poodle/a dog with a rainbow texture/fatezero_30_fps.mp4"
+              type="video/mp4">
+            </video>
+            <video preload="auto"poster="" id="video25" autoplay controls muted loop width="140px">
+              <!-- Your video preload="auto"file here -->
+              <source src="./sm/assets/poodle/a dog with a rainbow texture/rerender_fps_30.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- End video carousel -->
+  </section>
+  <!-- End video preload="auto"carousel -->
 
 
 
