@@ -8,7 +8,7 @@ body {
 
   .wrapper {
     width: 85%;
-    margin: 35px auto;
+    margin: 30px auto;
   }
   
   img {
@@ -35,7 +35,7 @@ body {
   
   .container {
     display: flex;
-    gap: 60px;
+    gap: 30px;
     align-items: flex-start;
   }
   
