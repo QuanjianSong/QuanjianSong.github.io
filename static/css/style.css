@@ -4,102 +4,100 @@ body {
     padding: 40px 0;
     line-height: 1.6;
     background-color: #fff;
-  }
+}
 
-  .wrapper {
-    width: 90%;
-    margin: 25px;
-  }
-  
-  img {
-    border-radius: 20px;
-    max-width: 180px;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
-  }
-  
-  h2 {
-    font-weight: bold;
-    color: #4682b4;
-    margin-top: 40px;
-    font-size: 24px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #0044cc;
-  }
-  
-  .container {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
-  }
-  
-  .left {
-    flex: 1;
-    text-align: center;
-    min-width: 220px;
-  }
-  
-  .right {
-    flex: 3;
-  }
-  
-  .publication {
-    margin-bottom: 30px;
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-  }
-  
-  .publication img {
-    width: 140px;
-    height: auto;
-    border: 1px solid #ccc;
-  }
-  
-  .pub-info {
-    flex: 1;
-  }
-  
-  .buttons a {
+/* 每个paper的按钮 */
+.buttons a {
     margin-right: 10px;
     padding: 4px 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 13px;
     background-color: #f9f9f9;
-  }
-  
-  .year {
-    margin-top: 30px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 30px;
-    }
-    .wrapper {
-      width: 90%;
-    }
-  }
-
-  .publication img {
-    width: 200px;       /* 根据需要可再调大 */
-    height: 100px;
-    border-radius: 0;   /* ✅ 去掉圆角，变为方形 */
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-  }
-
-  .my-name {
-    font-weight: 550; /* 或 600，根据你想要的粗细程度调整 */
 }
+
+/* 控制整体布局 */
+.wrapper {
+    width: 90%;
+    margin: 25px;
+}
+
+.profile-pic {
+    border-radius: 20px;
+    max-width: 180px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    color: #4682b4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #0044cc;
+}
+
+/* 左右两边分块的布局 */
+.container {
+    display: flex;
+    gap: 0.5%;
+    align-items: flex-start;
+}
+
+/* 左右两边分块的布局 */
+.left {
+    flex: 1;
+    text-align: center;
+    min-width: 220px;
+}
+
+/* 左右两边分块的布局 */
+.right {
+    flex: 3;
+}
+
+/* pub左边和右边 */
+.publication {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.pub-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* pub文章的图片控制 */
+.pub-image-wrapper img {
+    width: 170px;
+    height: 100px;
+    border-radius: 0;
+    border: 2px solid #ccc;
+    /* 右下阴影 */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); 
+    flex-shrink: 0;
+}
+
+/* pub文章的图片标记 */
+.pub-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3366ff;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 6px;
+}
+
+
