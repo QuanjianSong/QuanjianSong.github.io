@@ -7,8 +7,8 @@ body {
   }
 
   .wrapper {
-    width: 80%;
-    margin: 0 auto;
+    width: 85%;
+    margin: 30px auto;
   }
   
   img {
@@ -91,4 +91,11 @@ body {
       width: 90%;
     }
   }
-  
+
+  .publication img {
+    width: 200px;       /* 根据需要可再调大 */
+    height: 100px;
+    border-radius: 0;   /* ✅ 去掉圆角，变为方形 */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+  }
