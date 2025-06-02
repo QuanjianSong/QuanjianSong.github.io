@@ -7,8 +7,8 @@ body {
   }
 
   .wrapper {
-    width: 85%;
-    margin: 30px auto;
+    width: 90%;
+    margin: 25px;
   }
   
   img {
@@ -99,3 +99,7 @@ body {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
   }
+
+  .my-name {
+    font-weight: 550; /* 或 600，根据你想要的粗细程度调整 */
+}
