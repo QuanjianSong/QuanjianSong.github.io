@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>UniVST: A Unified Framework for Training-free Localized Video Style Transfer</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">UniVST: A Unified Framework for Training-free Localized
+                            Video Style Transfer</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="https://github.com/QuanjianSong" target="_blank">Quanjian
+                                    Song</a><sup>1</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=Dp3L1bsAAAAJ&hl=zh-CN&oi=ao"
+                                    target="_blank">Mingbao Lin</a><sup>2</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=zh-CN&user=nnF1s7kAAAAJ"
+                                    target="_blank">Wengyi Zhan</a><sup>1</sup>, </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=DNuiPHwAAAAJ&hl=zh-CN&oi=ao"
+                                    target="_blank">Shuicheng Yan</a><sup>3</sup>, </span>
+                            <span class="author-block">
+                                <a href="https://mac.xmu.edu.cn/ljcao/" target="_blank">Liujuan Cao</a><sup>1,✉️</sup>,
+                            </span>
+                            <span class="author-block">
+                                <a href="https://mac.xmu.edu.cn/rrji/" target="_blank">Rongrong Ji</a><sup>1</sup>
+                            </span>
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"> <sup>1</sup>Key Laboratory of Multimedia Trusted Perception and
+                                Efficient Computing, <br> Ministry of Education of China, Xiamen University,
+                                China</span>
+                            <br>
+                            <span class="author-block"> <sup>2</sup>Rakuten Asia Pte. Ltd.</span>
+                            <span class="author-block"> <sup>3</sup>National University of Singapore</span>
+                            <br>
+                            <span class="eql-cntrb"><small><sup>✉️</sup>Corresponding authors.</small></span>
+                            <br>
+                            <span class="author-block">Accepted by TPAMI 2025</span>
+                            <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Paper PDF link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/2410.20084" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/QuanjianSong/UniVST" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                                <!-- Hugging Face link -->
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/papers/2410.20084" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <img src="static/images/hf.png" alt="Hugging Face">
+                                        </span>
+                                        <span>Hugging Face</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- TL;DR: -->
+                        <h2 class="content has-text-justified">
+                            <b>TL;DR: </b>
+                            We presents UniVST, a unified framework for localized video style transfer based on
+                            diffusion models.
+                            It operates without the need for training, offering a distinct advantage over existing
+                            diffusion methods that transfer style across entire videos.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+        <div class="container is-max-desktop">
+            <div class="hero-body">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <h2 class="title is-2">UniVST</h2>
+                        <div class="content has-text-justified">
+                            <div id="results-carousel" class="carousel results-carousel" align="center">
+                                <!--  -->
+                                <div class="item item-video1">
+                                    <table width="900" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="static/videos/begin/case1/style1.png">
+                                                        <img src="static/videos/begin/case1/style1.png" alt="" 
+                                                             style="width: auto; height: 100%; display: block;">
+                                                    </a>
+                                                    <p class="style_ref">Style Image</p>
+                                                </td>
+                                                <td rowspan="2" style="vertical-align: middle; display: table-cell;">
+                                                    <a href="static/videos/begin/case1/Origin.mp4">
+                                                        <video src="static/videos/begin/case1/Origin.mp4" autoplay loop controls muted 
+                                                               style="width: auto; height: 100%; display: block;"></video>
+                                                    </a>
+                                                    <p class="prompt_single_vid">Original Video</p>
+                                                </td>
+                                                <td>
+                                                    <a href="static/videos/begin/case1/Ours1.mp4">
+                                                        <video src="static/videos/begin/case1/Ours1.mp4" autoplay loop controls muted 
+                                                               style="width: auto; height: 100%; display: block;"></video>
+                                                    </a>
+                                                    <p class="prompt_single_vid">Stylized Video</p>
+                                                </td>
+                                            </tr>
+                                            <!--  -->
+                                            <tr>
+                                                <td>
+                                                    <a href="static/videos/begin/case1/style2.png">
+                                                        <img class="center" src="static/videos/begin/case1/style2.png" alt="" 
+                                                             style="width: auto; height: 100%; display: block;">
+                                                    </a>
+                                                    <p class="style_ref">Style Image</p>
+                                                </td>
+                                                <td>
+                                                    <a href="static/videos/begin/case1/Ours2.mp4">
+                                                        <video src="static/videos/begin/case1/Ours2.mp4" autoplay loop controls muted 
+                                                               style="width: auto; height: 100%; display: block;"></video>
+                                                    </a>
+                                                    <p class="prompt_single_vid">Stylized Video</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="item item-video2">
+                                    <table width="900" align="center">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <a href="static/videos/begin/case2/style1.png">
+                                                        <img src="static/videos/begin/case2/style1.png" alt="" 
+                                                             style="width: auto; height: 100%; display: block;">
+                                                    </a>
+                                                    <p class="style_ref">Style Image</p>
+                                                </td>
+                                                <td rowspan="2" style="vertical-align: middle; display: table-cell;">
+                                                    <a href="static/videos/begin/case2/Origin.mp4">
+                                                        <video src="static/videos/begin/case2/Origin.mp4" autoplay loop controls muted 
+                                                               style="width: auto; height: 100%; display: block;"></video>
+                                                    </a>
+                                                    <p class="prompt_single_vid">Original Video</p>
+                                                </td>
+                                                <td>
+                                                    <a href="static/videos/begin/case2/Ours1.mp4">
+                                                        <video src="static/videos/begin/case2/Ours1.mp4" autoplay loop controls muted 
+                                                               style="width: auto; height: 100%; display: block;"></video>
+                                                    </a>
+                                                    <p class="prompt_single_vid">Stylized Video</p>
+                                                </td>
+                                            </tr>
+                                            <!--  -->
+                                            <tr>
+                                                <td>
+                                                    <a href="static/videos/begin/case2/style2.png">
+                                                        <img class="center" src="static/videos/begin/case2/style2.png" alt="" 
+                                                             style="width: auto; height: 100%; display: block;">
+                                                    </a>
+                                                    <p class="style_ref">Style Image</p>
+                                                </td>
+                                                <td>
+                                                    <a href="static/videos/begin/case2/Ours2.mp4">
+                                                        <video src="static/videos/begin/case2/Ours2.mp4" autoplay loop controls muted 
+                                                               style="width: auto; height: 100%; display: block;"></video>
+                                                    </a>
+                                                    <p class="prompt_single_vid">Stylized Video</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!--  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End teaser video -->
+
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            This paper presents UniVST, a unified framework for localized video style transfer based on
+                            diffusion models. It operates without the
+                            need for training, offering a distinct advantage over existing diffusion methods that
+                            transfer style across entire videos. The endeavors of this paper
+                            comprise: (1) A point-matching mask propagation strategy that leverages the feature maps
+                            from the DDIM inversion. This streamlines the model's
+                            architecture by obviating the need for tracking models. (2) A training-free AdaIN-guided
+                            localized video stylization mechanism that operates at
+                            both the latent and attention levels. This balances content fidelity and style richness,
+                            mitigating the loss of localized details commonly associated
+                            with direct video stylization. (3) A sliding-window consistent smoothing scheme that
+                            harnesses optical flow within the pixel representation and
+                            refines predicted noise to update the latent space. This significantly enhances temporal
+                            consistency and diminishes artifacts in stylized video.
+                            Our proposed UniVST has been validated to be superior to existing methods in quantitative
+                            and qualitative metrics. It adeptly addresses the
+                            challenges of preserving the primary object's style while ensuring temporal consistency and
+                            detail preservation.
+                            Our code is available at <a href="https://github.com/QuanjianSong/UniVST " target="_blank"
+                                style="color: #3399FF;">GitHub.</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+
+
+    <!-- Paper method -->
+    <section class="section hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-">
+                        <h2 class="title is-2">Method</h2>
+                        <div class="content has-text-justified">
+                            <td colspan="3">
+                                <p>
+                                    We propose <b>UniVST</b>, a unified framework for training-free localized video style
+                                    transfer based on diffusion models. UniVST first applies DDIM inversion to obtain the 
+                                    initial noise of the original video and style image, and simultaneously integrates
+                                    <i>Point-Matching Mask Propagation</i> to generate object masks.
+                                    It then performs <i>AdaIN-Guided Localized Video Stylization</i> with a threebranch architecture
+                                    for information interaction. Furthermore, <i>SlidingWindow Consistent Smoothing</i> is
+                                    incorporated into the denoising process, thereby enhancing the temporal consistency in the latent space.
+                                    The framework is illustrated below:
+                                </p>
+                            </td>
+                        </div>
+                        <div class="columns is-centered has-text-justified">
+                            <td colspan="3">
+                                <img src="static/images/overall_framework.png" alt="framework" width="1000" />
+                            </td>
+                        </div>
+                        <p><br></p>
+                    </div>
+    </section>
+    <!--End paper poster -->
+
+
+
+
+
+    <!-- Experiment Results -->
+    <section class="hero is-light is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Experiment Results</h2>
+        </div>
+
+        <!-- Single Step Video Style Transfer -->
+        <section class="video-grid" style="margin-top: 20px;">
+            <div class="container" style="width: 85%; margin: auto;">
+                <div class="content has-text-centered" style="margin-top: 0rem;">
+                    <h3 class="title is-4">Single Step Video Style Transfer</h3>
+                </div>
+                <!-- 滑动 -->
+                <div id="results-carousel" class="carousel results-carousel" align="center">
+                    <div class="item item-video1">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 10px; margin-top: 10px;">
+                            <!-- Video 1 -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image</div>
+                                    <img src="static/videos/ours/single/case1/style.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/single/case1/concat.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Video 2 -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image</div>
+                                    <img src="static/videos/ours/single/case2/style.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/single/case2/concat.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video2">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 10px; margin-top: 10px;">
+                            <!-- Video 1 -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image</div>
+                                    <img src="static/videos/ours/single/case3/style.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/single/case3/concat.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Video 2 -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image</div>
+                                    <img src="static/videos/ours/single/case4/style.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/single/case4/concat.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video3">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 10px; margin-top: 10px;">
+                            <!-- Video 1 -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image</div>
+                                    <img src="static/videos/ours/single/case5/style.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/single/case5/concat.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!-- Video 2 -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image</div>
+                                    <img src="static/videos/ours/single/case6/style.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/single/case6/concat.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Multi Step Video Style Transfer -->
+        <section class="video-grid" style="margin-top: 50px;">
+            <div class="container" style="width: 85%; margin: auto;">
+                <div class="content has-text-centered" style="margin-top: 3rem;">
+                    <h3 class="title is-4">Multi Step Video Style Transfer</h3>
+                </div>
+                <!-- 滑动 -->
+                <div id="results-carousel" class="carousel results-carousel" align="center">
+                    <div class="item item-video1">
+                        <div
+                            style="display: flex; justify-content: space-between; margin-bottom: 10px; margin-top: 10px;">
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image 1</div>
+                                    <img src="static/videos/ours/multi/case1/style1.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video 1
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/multi/case1/concat1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!--  -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image 2</div>
+                                    <img src="static/videos/ours/multi/case1/style2.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Stylized Video 1 and Stylized Video 2
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/multi/case1/concat2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video2">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; margin-top: 10px;">
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image 1</div>
+                                    <img src="static/videos/ours/multi/case2/style1.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video 1
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/multi/case2/concat1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!--  -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image 2</div>
+                                    <img src="static/videos/ours/multi/case2/style2.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Stylized Video 1 and Stylized Video 2
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/multi/case2/concat2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="item item-video3">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; margin-top: 10px;">
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image 1</div>
+                                    <img src="static/videos/ours/multi/case3/style1.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Original Video and Stylized Video 1
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/multi/case3/concat1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <!--  -->
+                            <div style="width: 45%; text-align: center;">
+                                <div style="align-items: center; justify-content: center;">
+                                    <div
+                                        style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; margin-right: 5px; color: black; font-weight: bold;">
+                                        Style Image 2</div>
+                                    <img src="static/videos/ours/multi/case3/style2.png" width="50%" alt="style_1" />
+                                </div>
+                                <!--  -->
+                                <div
+                                    style="margin-bottom: 0px; font-size: 22px; font-family: 'Microsoft YaHei', cursive; color: black; font-weight: bold;">
+                                    Stylized Video 1 and Stylized Video 2
+                                </div>
+                                <video autoplay controls muted loop playsinline width="100%" style="margin-top: 4px;">
+                                    <source src="static/videos/ours/multi/case3/concat2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+
+
+    <!-- Comparison -->
+    <section class="hero is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Comparison</h2>
+        </div>
+        <div class="column">
+            <div class="column has-text-centered">
+                <div style="width: 85%; margin: auto;">
+                    <!--  -->
+                    <div class="content has-text-centered" style="margin-top: 0rem;">
+                        <h3 class="title is-4">With Open-Source Models</h3>
+                    </div>
+                    <!-- 加滑动的逻辑 -->
+                    <div id="results-carousel" class="carousel results-carousel" align="center">
+                        <!--  -->
+                        <div class="item item-video1">
+                            <table class="table is-fullwidth is-striped is-hoverable" style="table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Style Image</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Original Video</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;"><b>UniVST (Ours)</b></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Diffutoon</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">StyleCrafter</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">BIVDiff</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">AnyV2V</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">EFDM<sup>*</sup></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">CAST<sup>*</sup></div>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                    <tr style="vertical-align: top;">
+                                        <td style="text-align: center; padding: 5px;">
+                                            <img src="static/videos/open_source/case1/style.png"
+                                                style="width: 100%; max-width: 300px;" alt="style_1" />
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/Origin.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/UniVST.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/Diffutoon.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/StyleCrafter.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/BIVDiff.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/AnyV2V.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/EFDM.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; max-width: 300px;">
+                                                <source src="static/videos/open_source/case1/CAST.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--  -->
+                        <div class="item item-video2">
+                            <table class="table is-fullwidth is-striped is-hoverable" style="table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Style Image</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Original Video</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;"><b>UniVST (Ours)</b></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Diffutoon</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">StyleCrafter</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">BIVDiff</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">AnyV2V</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">EFDM<sup>*</sup></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">CAST<sup>*</sup></div>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                    <tr style="vertical-align: top;">
+                                        <td style="text-align: center; padding: 5px;">
+                                            <img src="static/videos/open_source/case2/style.png"
+                                                style="width: 100%; max-width: 300px;" alt="style_1" />
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/Origin.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/UniVST.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/Diffutoon.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/StyleCrafter.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/BIVDiff.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/AnyV2V.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/EFDM.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case2/CAST.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--  -->
+                        <div class="item item-video3">
+                            <table class="table is-fullwidth is-striped is-hoverable" style="table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Style Image</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Original Video</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;"><b>UniVST (Ours)</b></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Diffutoon</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">StyleCrafter</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">BIVDiff</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">AnyV2V</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">EFDM<sup>*</sup></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">CAST<sup>*</sup></div>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                    <tr style="vertical-align: top;">
+                                        <td style="text-align: center; padding: 5px;">
+                                            <img src="static/videos/open_source/case3/style.png"
+                                                style="width: 100%; max-width: 300px;" alt="style_1" />
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/Origin.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/UniVST.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/Diffutoon.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/StyleCrafter.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/BIVDiff.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/AnyV2V.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/EFDM.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case3/CAST.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--  -->
+                        <div class="item item-video4">
+                            <table class="table is-fullwidth is-striped is-hoverable" style="table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Style Image</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Original Video</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;"><b>UniVST (Ours)</b></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Diffutoon</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">StyleCrafter</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">BIVDiff</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">AnyV2V</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">EFDM<sup>*</sup></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">CAST<sup>*</sup></div>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                    <tr style="vertical-align: top;">
+                                        <td style="text-align: center; padding: 5px;">
+                                            <img src="static/videos/open_source/case4/style.png"
+                                                style="width: 100%; max-width: 300px;" alt="style_1" />
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/Origin.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/UniVST.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/Diffutoon.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/StyleCrafter.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/BIVDiff.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/AnyV2V.mp4"
+                                                    type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/EFDM.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <td style="vertical-align: top; padding: 5px;">
+                                            <video autoplay muted loop playsinline controls
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/open_source/case4/CAST.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="content has-text-centered" style="margin-top: 3rem;">
+                        <h3 class="title is-4">With Commercial Models</h3>
+                    </div>
+                    <!-- 插入滑动逻辑 -->
+                    <div id="results-carousel" class="carousel results-carousel" align="center">
+                        <div class="item item-video1">
+                            <!-- 其实就是这两句 -->
+                            <table class="table is-fullwidth is-striped is-hoverable" style="table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Style Image</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Original Video</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;"><b>UniVST (Ours)</b></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Gen-1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Gen-3</div>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                    <tr style="vertical-align: top;">
+                                        <td style="text-align: center; padding: 5px;">
+                                            <img src="static/videos/commercial/style_image.png"
+                                                style="width: 100%; max-width: 300px;" alt="style_1" />
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/Origin.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/UniVST.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/Gen1.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/Gen3.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--  -->
+                        <div class="item item-video2">
+                            <table class="table is-fullwidth is-striped is-hoverable" style="table-layout: fixed;">
+                                <tbody>
+                                    <tr>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Style Image</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Original Video</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;"><b>UniVST (Ours)</b></div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Gen-1</div>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <div style="margin-bottom: 2px;">Gen-3</div>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                    <tr style="vertical-align: top;">
+                                        <td style="text-align: center; padding: 5px;">
+                                            <img src="static/videos/commercial/style_image.png"
+                                                style="width: 100%; max-width: 300px;" alt="style_1" />
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/Origin.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/UniVST.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/Gen1.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                        <!--  -->
+                                        <td style="text-align: center; padding: 5px;">
+                                            <video autoplay controls muted loop playsinline
+                                                style="width: 100%; max-width: 300px;">
+                                                <source src="static/videos/commercial/Gen3.mp4" type="video/mp4">
+                                            </video>
+                                        </td>
+                                    </tr>
+                                    <!--  -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  -->
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="hero-body">
+        <div class="container is-max-desktop content" margin: 0 auto;>
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@article{song2025univst,
+    title={Univst: A unified framework for training-free localized video style transfer},
+    author={Song, Quanjian and Lin, Mingbao and Zhan, Wengyi and Yan, Shuicheng and Cao, Liujuan and Ji, Rongrong},
+    journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    year={2025},
+    publisher={IEEE}
+}</code></pre>
+        </div>
+    </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a>, <a
+                                href="https://gongyeliu.github.io/StyleCrafter.github.io"
+                                target="_blank">StyleCrafter</a> and <a href="https://tiger-ai-lab.github.io/AnyV2V"
+                                target="_blank">AnyV2V</a>.
+                            You are free to borrow the source code of this website, we just ask that you link back to
+                            this page in the footer. <br> This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+            videoWrappers.forEach(wrapper => {
+                const defaultVideo = wrapper.querySelector('.default-video');
+                const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+                const height = wrapper.offsetWidth / aspectRatio;
+
+                wrapper.style.height = `${height}px`;
+
+                wrapper.addEventListener('mouseenter', () => {
+                    defaultVideo.pause();
+                    hoverVideo.play();
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    defaultVideo.play();
+                    hoverVideo.pause();
+                });
+            });
+        });
+        $(document).ready(function () {
+            var carouselItems = $('.carousel .item');
+            var numItems = carouselItems.length;
+            var numVideos = 5;
+            var currentIndex = 0;
+
+            $('.carousel').on('click', function () {
+                currentIndex++;
+                if (currentIndex + numVideos <= numItems) {
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                } else {
+                    currentIndex = 0;
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                }
+            });
+
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+        });
+    </script>
+
+</body>
+
+</html>

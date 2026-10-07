@@ -1,0 +1,103 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 40px 0;
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+/* 每个paper的按钮 */
+.buttons a {
+    margin-right: 10px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    background-color: #f9f9f9;
+}
+
+/* 控制整体布局 */
+.wrapper {
+    width: 90%;
+    margin: 25px;
+}
+
+.profile-pic {
+    border-radius: 20px;
+    max-width: 180px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-weight: bold;
+    color: #4682b4;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: #0044cc;
+}
+
+/* 左右两边分块的布局 */
+.container {
+    display: flex;
+    gap: 0.5%;
+    align-items: flex-start;
+}
+
+/* 左右两边分块的布局 */
+.left {
+    flex: 1;
+    text-align: center;
+    min-width: 220px;
+}
+
+/* 左右两边分块的布局 */
+.right {
+    flex: 3;
+}
+
+/* pub左边和右边 */
+.publication {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.pub-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* pub文章的图片控制 */
+.pub-image-wrapper img {
+    width: 170px;
+    height: 100px;
+    border-radius: 0;
+    border: 2px solid #ccc;
+    /* 右下阴影 */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); 
+    flex-shrink: 0;
+}
+
+/* pub文章的图片标记 */
+.pub-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #3366ff;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 3px 6px;
+}
+
+

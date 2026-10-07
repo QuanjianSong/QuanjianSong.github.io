@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+    <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LightMotion: A Light and Tuning-free Method for Simulating Camera Motion in Video Generation</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+
+
+<body>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title">LightMotion: A Light and Tuning-free Method for Simulating Camera Motion in Video Generation</h1>
+                        <div class="is-size-5 publication-authors">
+                            <!-- Paper authors -->
+                            <span class="author-block">
+                                <a href="https://github.com/QuanjianSong" target="_blank">Quanjian
+                                    Song</a><sup>1</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=Dp3L1bsAAAAJ&hl=zh-CN&oi=ao"
+                                    target="_blank">Zhihang Lin</a><sup>1,2</sup>,</span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?hl=zh-CN&user=nnF1s7kAAAAJ"
+                                    target="_blank">Zhanpeng Zeng</a><sup>1</sup>, </span>
+                            <span class="author-block">
+                                <a href="https://scholar.google.com/citations?user=DNuiPHwAAAAJ&hl=zh-CN&oi=ao"
+                                    target="_blank">Ziyue Zhang</a><sup>1</sup>, </span>
+                            <span class="author-block">
+                                <a href="https://mac.xmu.edu.cn/ljcao/" target="_blank">Liujuan Cao</a><sup>1,✉️</sup>,
+                            </span>
+                            <!-- <span class="author-block">
+                                <a href="https://mac.xmu.edu.cn/rrji/" target="_blank">Rongrong Ji</a><sup>1</sup>
+                            </span> -->
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"> <sup>1</sup>Key Laboratory of Multimedia Trusted Perception and
+                                Efficient Computing, <br> Ministry of Education of China, Xiamen University,
+                                China</span>
+                            <br>
+                            <span class="author-block"> <sup>2</sup>Shanghai Innovation Institute.</span>
+                            <br>
+                            <span class="eql-cntrb"><small><sup>✉️</sup>Corresponding authors.</small></span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Paper PDF link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/2503.06508" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/QuanjianSong/LightMotion" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                                <!-- Hugging Face link -->
+                                <span class="link-block">
+                                    <a href="" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <img src="static/images/hf.png" alt="Hugging Face">
+                                        </span>
+                                        <span>Hugging Face</span>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- TL;DR: -->
+                        <h2 class="content has-text-justified">
+                            <b>TL;DR: </b>
+                            We presents LightMotion, a light and tuning-free for simulating camera motion in video generation.
+                            Operating in latent space, it eliminates additional fine-tuning, inpainting, and depth estimation, making it more streamlined than existing methods.
+                        </h2>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Teaser video-->
+    <section class="hero teaser">
+        <div class="container is-max-desktop" style="width: 100%; margin: auto;">
+            <div class="hero-body">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column custom-width">
+                        <h2 class="title is-2">Teaser</h2>
+                        <div class="content has-text-justified">
+                            <div id="results-carousel" class="carousel results-carousel" align="center">
+                                <!--  -->
+                                <div class="item item-video1" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                                    <!-- Left video block -->
+                                    <div style="display:flex; flex-direction:column; align-items:center; width:45%;">
+                                        <video autoplay muted loop playsinline controls
+                                            style="width:100%; height:auto; object-fit:contain;">
+                                            <source src="static/videos/teaser/case1/output1.mp4" type="video/mp4">
+                                        </video>
+                                        <div style="margin-top: 8px; font-size: 15px; color:#555; text-align:center;">
+                                            A campfire crackling in the woods, with embers rising into the night sky.
+                                        </div>
+                                    </div>
+                                    <!-- Right video block -->
+                                    <div style="display:flex; flex-direction:column; align-items:center; width:45%;">
+                                        <video autoplay muted loop playsinline controls
+                                            style="width:100%; height:auto; object-fit:contain;">
+                                            <source src="static/videos/teaser/case1/output2.mp4" type="video/mp4">
+                                        </video>
+                                        <div style="margin-top: 8px; font-size: 15px; color:#555; text-align:center;">
+                                            A waterfall cascading down a rocky cliff, splashing into a crystal-clear pool.
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!--  -->
+
+                                <div class="item item-video2" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                                    <!-- Left video block -->
+                                    <div style="display:flex; flex-direction:column; align-items:center; width:45%;">
+                                        <video autoplay muted loop playsinline controls
+                                            style="width:100%; height:auto; object-fit:contain;">
+                                            <source src="static/videos/teaser/case2/output1.mp4" type="video/mp4">
+                                        </video>
+                                        <div style="margin-top: 8px; font-size: 15px; color:#555; text-align:center;">
+                                            A lighthouse standing tall on a rocky shore, its light sweeping across the ocean.
+                                        </div>
+                                    </div>
+                                    <!-- Right video block -->
+                                    <div style="display:flex; flex-direction:column; align-items:center; width:45%;">
+                                        <video autoplay muted loop playsinline controls
+                                            style="width:100%; height:auto; object-fit:contain;">
+                                            <source src="static/videos/teaser/case2/output2.mp4" type="video/mp4">
+                                        </video>
+                                        <div style="margin-top: 8px; font-size: 15px; color:#555; text-align:center;">
+                                            A wolf stands on a rocky hilltop with the moon glowing brightly behind it.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--  -->
+
+                                <div class="item item-video3" style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                                    <!-- Left video block -->
+                                    <div style="display:flex; flex-direction:column; align-items:center; width:45%;">
+                                        <video autoplay muted loop playsinline controls
+                                            style="width:100%; height:auto; object-fit:contain;">
+                                            <source src="static/videos/teaser/case3/output1.mp4" type="video/mp4">
+                                        </video>
+                                        <div style="margin-top: 8px; font-size: 15px; color:#555; text-align:center;">
+                                            A beaver stands near the wooden dam.
+                                        </div>
+                                    </div>
+                                    <!-- Right video block -->
+                                    <div style="display:flex; flex-direction:column; align-items:center; width:45%;">
+                                        <video autoplay muted loop playsinline controls
+                                            style="width:100%; height:auto; object-fit:contain;">
+                                            <source src="static/videos/teaser/case3/output2.mp4" type="video/mp4">
+                                        </video>
+                                        <div style="margin-top: 8px; font-size: 15px; color:#555; text-align:center;">
+                                            A steam train puffing out smoke, traveling through a winter landscape.
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End teaser video -->
+
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <h2 class="title is-2">Abstract</h2>
+                    <div class="content has-text-justified">
+                        <p>
+                            Existing camera-controlled video generation methods face fine-tuning overhead or inference bottlenecks.
+                            In this paper, we propose LightMotion, a light and tuning-free method for simulating camera motion in video generation.
+                            Operating in latent space, it eliminates fine-tuning, inpainting, and depth estimation, making it more streamlined than existing methods. The endeavors of this paper comprise:
+                            (i) The latent space permutation simulates three basic camera motions: panning, zooming, and rotation, whose combinations cover almost all real-world movements.
+                            (ii) The latent space resampling combines background-aware sampling with cross-frame alignment, accurately filling new perspectives while maintaining coherence across frames.
+                            (iii) Our analysis reveals that the tuning-free permutation and resampling will cause an SNR shift in latent space, leading to poor generation.
+                            To address this, we propose the latent space correction, which mitigates the shift and improves generation quality.
+                            Extensive experiments validate the superiority of LightMotion over other baselines.
+                            The code will be released later.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End paper abstract -->
+
+
+
+    <!-- Paper method -->
+    <section class="section hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered has-text-centered">
+                    <div class="column is-">
+                        <h2 class="title is-2">Method</h2>
+                        <div class="content has-text-justified">
+                            <td colspan="3">
+                                <p>
+                                    We propose <b>LightMotion</b>, a light and tuning-free method for simulating camera motion in video generation.
+                                    During inference, LightMotion first performs standard denoising to T<sub>0</sub>
+                                    It then applies <i>latent space permutation</i> to simulate diverse camera motions, combined with <i>latent space resampling</i> to fill in newly exposed views.
+                                    Subsequently, the model continues standard denoising to T<sub>1</sub> to preserve semantic integrity and camera motion consistency.
+                                    To mitigate the SNR shift introduced by tuning-free permutation and resampling, we introduce <i>latent space correction</i>, which refines the SNR shift and enables higher-quality generation results.
+                                    The overall framework is illustrated below:
+                                </p>
+                            </td>
+                        </div>
+                        <div class="columns is-centered has-text-justified">
+                            <td colspan="3">
+                                <img src="static/images/overall_framework.png" alt="framework" width="1000" />
+                            </td>
+                        </div>
+                        <p><br></p>
+                    </div>
+    </section>
+    <!--End paper poster -->
+
+
+    <!-- Visual Gallery -->
+    <section class="hero is-light is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Visual Gallery</h2>
+        </div>
+        <div class="container" style="width: 90%; margin: auto;">
+            <!-- 滑动 -->
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+                <div class="item item-video1" style="text-align: center;">
+                    <div style="display:flex; justify-content:center; gap:30px;">
+                        <!-- 左视频 -->
+                        <div style="width:45%; text-align:center;">
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/ours/output1.mp4" type="video/mp4">
+                            </video>
+                            <div style="margin-top:6px;">A rabbit stands beside a flower bed with a small carrot lying nearby.</div>
+                        </div>
+                
+                        <!-- 右视频 -->
+                        <div style="width:45%; text-align:center;">
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/ours/output2.mp4" type="video/mp4">
+                            </video>
+                            <div style="margin-top:6px;">A parrot stands on the small branch.</div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item item-video2" style="text-align: center;">
+                    <div style="display:flex; justify-content:center; gap:30px;">
+                        <!-- 左视频 -->
+                        <div style="width:45%; text-align:center;">
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/ours/output3.mp4" type="video/mp4">
+                            </video>
+                            <div style="margin-top:6px;">A beaver stands near the wooden dam.</div>
+                        </div>
+                
+                        <!-- 右视频 -->
+                        <div style="width:45%; text-align:center;">
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/ours/output4.mp4" type="video/mp4">
+                            </video>
+                            <div style="margin-top:6px;">A water fountain stands in the middle of a stone courtyard.</div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item item-video3" style="text-align: center;">
+                    <div style="display:flex; justify-content:center; gap:30px;">
+                        <!-- 左视频 -->
+                        <div style="width:45%; text-align:center;">
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/ours/output5.mp4" type="video/mp4">
+                            </video>
+                            <div style="margin-top:6px;">A raven stands on a stone cross in an overgrown graveyard.</div>
+                        </div>
+                
+                        <!-- 右视频 -->
+                        <div style="width:45%; text-align:center;">
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/ours/output6.mp4" type="video/mp4">
+                            </video>
+                            <div style="margin-top:6px;">A small owl perches on a branch under a crescent moon in a quiet forest.</div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Qualitative Comparison -->
+    <section class="hero is-small">
+        <div class="hero-body has-text-centered">
+            <h2 class="title is-2 mmmu">Qualitative Comparison</h2>
+        </div>
+
+        <div class="container" style="width: 90%; margin: auto;">
+            <!-- 滑动 -->
+            <div id="results-carousel" class="carousel results-carousel" align="center">
+                <div class="item item-video1" style="text-align: center;">
+                    <div class="content has-text-centered" style="margin-top: 0rem;">
+                        <h3 class="title is-4">Panning Right(A hawk perches on a wooden crossbeam overlooking a wide plain.)</h3>
+                    </div>
+                    <!-- 上排：3 个 -->
+                    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <div style="width:30%;">
+                            <div>Animatediff (LoRA)</div>
+                            <video autoplay muted loop playsinline controls
+                                style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/panning/animatediff.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div style="width:30%;">
+                            <div>Direct-A-Video</div>
+                            <video autoplay muted loop playsinline controls
+                                style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/panning/direct.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:30%;">
+                            <div>CameraCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/panning/cameractrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <!-- 下排：3 个 -->
+                    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                        <div style="width:30%;">
+                            <div>MotionCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/panning/motionctrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:30%;">
+                            <div>MotionBooth</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/panning/motionbooth.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:30%;">
+                            <div>LightMotion (Ours)</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/panning/ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="item item-video2" style="text-align: center;">
+                    <div class="content has-text-centered" style="margin-top: 0rem;">
+                        <h3 class="title is-4">Zooming Out(A butterfly flutters above a small flower in a garden.)</h3>
+                    </div>
+                
+                    <!-- 上排：3 个 -->
+                    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                        <div style="width:30%;">
+                            <div>Animatediff (LoRA)</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_out/animatediff.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:30%;">
+                            <div>Direct-A-Video</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_out/direct.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:30%;">
+                            <div>CameraCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_out/cameractrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                
+                    <!-- 下排：2 个 -->
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                
+                        <div style="width:30%;">
+                            <div>MotionCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_out/motionctrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:30%;">
+                            <div>LightMotion (Ours)</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_out/ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                    </div>
+                
+                </div>
+                <!--  -->
+                <div class="item item-video3" style="text-align: center;">
+                    <div class="content has-text-centered" style="margin-top: 0rem;">
+                        <h3 class="title is-4">Zooming In (A cat sits on a tree stump watching a butterfly flutter nearby.)</h3>
+                    </div>
+                
+                    <!-- 上排：2 个 -->
+                    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
+                        <div style="width:40%;">
+                            <div>Animatediff (LoRA)</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_in/animatediff.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:40%;">
+                            <div>CameraCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_in/cameractrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                
+                    <!-- 下排：2 个 -->
+                    <div style="display: flex; justify-content: center; gap: 20px;">
+                
+                        <div style="width:40%;">
+                            <div>MotionCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_in/motionctrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:40%;">
+                            <div>LightMotion (Ours)</div>
+                            <video autoplay muted loop playsinline controls
+                                   style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/zooming_in/ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                    </div>
+                
+                </div>
+                <!--  -->
+                <div class="item item-video4" style="text-align: center;">
+                    <div class="content has-text-centered" style="margin-top: 0rem;">
+                        <h3 class="title is-4">Rotation (A seagull stands on the edge of a fishing boat with the ocean stretching beyond.)</h3>
+                    </div>
+                    <!--  -->
+                    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px; flex-wrap: wrap;">
+                        <div style="width:30%;">
+                            <div>CameraCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/rotation/cameractrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div style="width:30%;">
+                            <div>MotionCtrl</div>
+                            <video autoplay muted loop playsinline controls
+                                style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/rotation/motionctrl.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                
+                        <div style="width:30%;">
+                            <div>LightMotion (Ours)</div>
+                            <video autoplay muted loop playsinline controls
+                                style="width:100%; height:auto; object-fit:contain;">
+                                <source src="static/videos/comparison/rotation/ours.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+
+    </section>
+        
+            
+        
+    </section>
+
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="hero-body">
+        <div class="container is-max-desktop content" margin: 0 auto;>
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@article{song2025lightmotion,
+    title={LightMotion: A Light and Tuning-free Method for Simulating Camera Motion in Video Generation},
+    author={Song, Quanjian and Lin, Zhihang and Zeng, Zhanpeng and Zhang, Ziyue and Cao, Liujuan and Ji, Rongrong},
+    journal={arXiv preprint arXiv:2503.06508},
+    year={2025}
+}</code></pre>
+        </div>
+    </div>
+    </section>
+    <!--End BibTex citation -->
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a>, <a
+                                href="https://gongyeliu.github.io/StyleCrafter.github.io"
+                                target="_blank">StyleCrafter</a> and <a href="https://tiger-ai-lab.github.io/AnyV2V"
+                                target="_blank">AnyV2V</a>.
+                            You are free to borrow the source code of this website, we just ask that you link back to
+                            this page in the footer. <br> This website is licensed under a <a rel="license"
+                                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                                Commons Attribution-ShareAlike 4.0 International License</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const videoWrappers = document.querySelectorAll('.video-wrapper');
+
+            videoWrappers.forEach(wrapper => {
+                const defaultVideo = wrapper.querySelector('.default-video');
+                const aspectRatio = defaultVideo.videoWidth / defaultVideo.videoHeight;
+                const height = wrapper.offsetWidth / aspectRatio;
+
+                wrapper.style.height = `${height}px`;
+
+                wrapper.addEventListener('mouseenter', () => {
+                    defaultVideo.pause();
+                    hoverVideo.play();
+                });
+
+                wrapper.addEventListener('mouseleave', () => {
+                    defaultVideo.play();
+                    hoverVideo.pause();
+                });
+            });
+        });
+        $(document).ready(function () {
+            var carouselItems = $('.carousel .item');
+            var numItems = carouselItems.length;
+            var numVideos = 5;
+            var currentIndex = 0;
+
+            $('.carousel').on('click', function () {
+                currentIndex++;
+                if (currentIndex + numVideos <= numItems) {
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                } else {
+                    currentIndex = 0;
+                    carouselItems.removeClass('active');
+                    carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+                }
+            });
+
+            carouselItems.slice(currentIndex, currentIndex + numVideos).addClass('active');
+        });
+    </script>
+
+</body>
+
+</html>
