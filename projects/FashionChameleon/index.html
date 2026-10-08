@@ -1,417 +1,520 @@
 <!DOCTYPE html>
-<html lang="zh">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quanjian Song</title>
-    <link rel="stylesheet" href="static/css/style.css" />
-    <script src="static/js/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionChameleon - Real-Time human-garment customization</title>
+    <!-- 1. Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 2. Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #d4af37;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            scroll-behavior: smooth;
+        }
+        .font-serif {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .selection-gold::selection {
+            background-color: rgba(212, 175, 55, 0.3);
+            color: white;
+        }
+        .text-shadow-glow {
+            text-shadow: 0 0 15px rgba(0,0,0,0.9), 0 0 30px rgba(212,175,55,0.4);
+        }
+    </style>
+    <!-- 3. React dependencies (UMD) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <!-- 4. Babel for JSX parsing in browser -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <!-- 5. Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+    <!-- 6. Framer Motion (global) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.16.4/framer-motion.js"></script>
 </head>
-
-<body>
-    
-    <div class="wrapper">
-        <div class="container">
-            <div class="left">
-                
-
-                <div class="profile">
-                    <img class="profile-pic" src="static/assets/my_pic.png" alt="Quanjian Song" />
-                    <h2 class="profile-name" style="color: black; font-size: 18px; margin: 0px;">
-                        Quanjian Song
-                    </h2>
-                    <p class="profile-title" style="margin-top: 10px;margin-bottom: 0px;">
-                        Master
-                    </p>
-                    <p class="profile-school" style="margin: 0px;">
-                        <a href="https://www.xmu.edu.cn">Xiamen University</a>
-                    </p>
-                    <p class="profile-links">
-                        <a href="https://scholar.google.com" style="margin-right: 30px;" class="icon-link">📖</a>
-                        <a href="https://github.com/QuanjianSong" class="icon-link">🐱</a>
-                    </p>
-                </div>
-
-
-                
-            </div>
-            
-            <div class="right">
-                <h2>🎓 Biography</h2>
-                
-
-
-                <p style="text-align: justify; margin: 0px">
-                    Hi👋, I'm Quanjian Song (宋泉鉴), a Master candidate in the Department of Computer Science and Technology at 
-                    <a href="https://www.xmu.edu.cn" target="_blank">Xiamen University</a>.
-                    <br>
-                    I am currently researching in the Media Analytics and Computing (MAC) Lab, supervised by
-                    Prof. <a href="https://mac.xmu.edu.cn/rrji" target="_blank">Rongrong Ji</a> and 
-                    Prof. <a href="https://mac.xmu.edu.cn/ljcao" target="_blank">Liujuan Cao</a>.
-                    <br>
-                    My current <b>research interests</b> primarily include:
-                    <ul style="margin-top: 4px;">
-                        <li> 
-                            Visual Generation for Application: Controllable Video Generation, Streaming/Interactive Avatar/World Models.
-                        </li>
-                        <li> 
-                            Visual Generation for Post-Training: AR Distillation, Few-Step Distillation, Reinforcement Learning.
-                        </li>
-                    </ul> 
-
-                    Below is my <b>personal experience</b>:
-                    <ul style="margin-top: 4px;">
-                        <li> 
-                            2026/06 - Now: Streaming & Interactive World Model <b>·</b> DouYin AIGC Group Project Intern <b>·</b> <a href="https://www.bytedance.com/zh" target="_blank">ByteDance</a>.
-                        </li>
-                        <li> 
-                            2026/01 - 2026/06: Streaming & Interactive Video Customization <b>·</b> Taobao & Tmall Group Research Intern <b>·</b> <a href="https://ali-home.alibaba.com" target="_blank">Alibaba</a>.
-                        </li>
-                        <li>
-                            2025/08 - 2025/12: Video-to-Video Perspective Translation <b>·</b> Multimodal Generation Research Intern <b>·</b> <a href="https://ali-home.alibaba.com" target="_blank">First Intelligence</a>.
-                        </li>
-                    </ul> 
-
-                    I am actively seeking opportunities for the <b>2027 graduate recruitment cycle</b>. If you are interested in my research or potential collaboration, please feel free to reach out!
-                </p>
-                
-                
-                
-                
-                <hr>
-                
-                <h2>🔥 News</h2>
-                <ul style="margin-top: 4px;">
-                    <li>Not yet.</li>
-                </ul>
-
-                <hr>
-
-                <h2>📖 Selected Publications (Citation 100+)</h2>
-
-                
-                <div class="publication 1">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">NeurIPS 2026</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 1" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://arxiv.org/pdf/2410.20084" target="_blank"
-                            rel="noopener noreferrer">
-                            FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization
-                        </a>
-                        <div class="pub-authors">
-                            <strong>Quanjian Song</strong>, Mingbao Lin, Wengyi Zhan, Shuicheng Yan, Liujuan Cao, Rongrong Ji.
-                        </div>
-                        <div class="pub-meta">
-                            <i>arXiv, Oct. 2024</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://arxiv.org/pdf/2410.20084" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://github.com/QuanjianSong/UniVST" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="https://quanjiansong.github.io/projects/UniVST" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://huggingface.co/papers/2410.20084" target="_blank"
-                                rel="noopener noreferrer">Hugging Hace</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication 2">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">arXiv</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 2" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://arxiv.org/pdf/2503.06508" target="_blank"
-                            rel="noopener noreferrer">
-                            LightMotion: A Light and Tuning-free Method for Simulating Camera Motion in Video Generation
-                        </a>
-                        <div class="pub-authors">
-                            <strong>Quanjian Song</strong>, Zhihang Lin, Zhanpeng Zeng, Ziyue Zhang, Liujuan Cao, Rongrong Ji.
-                        </div>
-                        <div class="pub-meta">
-                            <i>arXiv, Mar. 2025</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://arxiv.org/pdf/2503.06508" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://github.com/QuanjianSong/LightMotion" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="XXX" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://huggingface.co/papers/2503.06508" target="_blank"
-                                rel="noopener noreferrer">Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="publication 3">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">arXiv</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 3" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://quanjiansong.github.io/" target="_blank"
-                            rel="noopener noreferrer">
-                            SceneDecorator: Towards Scene-Oriented Story Generation with Scene Planning and Scene Consistency
-                        </a>
-                        <div class="pub-authors">
-                            <strong>Quanjian Song</strong>.
-                        </div>
-                        <div class="pub-meta">
-                            <i>Not yet published.</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication 4">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">arXiv</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 4" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://arxiv.org/pdf/2404.17230" target="_blank"
-                            rel="noopener noreferrer">
-                            ObjectAdd: Adding Objects into Image via a Training-Free Diffusion Modification Fashion
-                        </a>
-                        <div class="pub-authors">
-                            Ziyue Zhang, Yuxin Zhang, <strong>Quanjian Song</strong>, Rongrong Ji.
-                        </div>
-                        <div class="pub-meta">
-                            <i>arXiv, Apr. 2024</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://arxiv.org/pdf/2404.17230" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://github.com/potato-kitty/ObjectAdd" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="publication 5">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">arXiv</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 5" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://quanjiansong.github.io/" target="_blank"
-                            rel="noopener noreferrer">
-                            Consistent Video Editing as Flow-Driven Image-to-Video Generation
-                        </a>
-                        <div class="pub-authors">
-                            Ge Wang, Songlin Fan, Hangxu Liu, <strong>Quanjian Song</strong>, Hewei Wang, Jinfeng Xu.
-                        </div>
-                        <div class="pub-meta">
-                            <i>arXiv, Jun. 2025.</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://arxiv.org/pdf/2506.07713" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-                
-
-
-                <div class="publication 6">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">arXiv</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 6" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://quanjiansong.github.io/" target="_blank"
-                            rel="noopener noreferrer">
-                            Few-Shot Path Compression and LoRA Optimization for 
-                            Accelerating Sampling in Stability-Aware Flux
-                        </a>
-                        <div class="pub-authors">
-                            Not yet published.
-                        </div>
-                        <div class="pub-meta">
-                            <i>Not yet published.</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="publication 7">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">arXiv</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 7" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://quanjiansong.github.io/" target="_blank"
-                            rel="noopener noreferrer">
-                            Sketch-to-Portrait Diffusion: Progressive Refinement for
-                            Photorealistic Synthesis from Rough Sketches
-                        </a>
-                        <div class="pub-authors">
-                            Not yet published.
-                        </div>
-                        <div class="pub-meta">
-                            <i>Not yet published.</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="publication 8">
-                    <div class="pub-image-wrapper">
-                        <div class="pub-tag">arXiv</div>
-                        <img src="projects/UniVST/static/images/overall_framework.png" alt="Paper 8" />
-                    </div>
-                    <div class="pub-info">
-                        <a class="pub-title" href="https://quanjiansong.github.io/" target="_blank"
-                            rel="noopener noreferrer">
-                            Improving Cross-Modal Fine-Grained Alignment in Text-to-Image
-                            Person Re-Identification with Attribute Awareness Learning
-                        </a>
-                        <div class="pub-authors">
-                            Not yet published.
-                        </div>
-                        <div class="pub-meta">
-                            <i>Not yet published.</i>
-                        </div>
-                        <div class="buttons">
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Paper</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">GitHub</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Project Page</a>
-                            <a href="https://quanjiansong.github.io/" target="_blank"
-                                rel="noopener noreferrer">Hugging Face</a>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                
-
-                <hr>
-                
-                <h2>🚀 Projects</h2>
-
-
-
-                <ul style="margin-top: 4px;">
-                    <li>
-                        Jul. 2022 - Oct. 2022, Development of the GPU operator <b>LuUnpack</b> for the 
-                        <a href="https://www.mindspore.cn/" target="_blank" rel="noopener noreferrer">MindSpore</a>
-                        deep learning framework.
-                    </li>
-                </ul>
-
-
-                
-                
-                <hr>
-                
-                <h2>🎖 Honors and Awards</h2>
-               
-                <ul style="margin-top: 4px;">
-                    <li>
-                        May 2025, Sixth Place, <a href="https://codalab.lisn.upsaclay.fr/competitions/21555">
-                        Track 3: Talking Head, NTIRE Workshop and Challenges @ CVPR 2025</a>.
-                    </li>
-                    <li>
-                        Jun. 2024, Outstanding Undergraduate Graduate.
-                    </li>
-                    <li>
-                        Aug. 2023, First Prize,
-                        <a href="http://www.fwwb.org.cn" target="_blank">
-                            China College Students' Service Outsourcing Innovation and Entrepreneurship Competition
-                        </a>.
-                    </li>
-                    <li>
-                        Jan. 2023, First Prize,
-                        <a href="https://www.cmathc.org.cn">
-                            Chinese Mathematics Competitions (Non-Mathematics Major Group) for College Students (CMC)
-                        </a>.
-                    </li>
-                    <li>
-                        Nov. 2021, First Prize, 
-                        <a href="https://www.mcm.edu.cn">
-                            China Undergraduate Mathematical Contest in Model (CUMCM)
-                        </a>.
-                    </li>
-                </ul>
-
-
-
-
-                
-                <hr>
-                
-
-
-                
-                <h2>🧑‍⚖️ Academic Services</h2>
-
-                <ul style="margin-top: 4px;">
-                    <li>
-                        Conference Reviewer: ACM MM 2026 <b>,</b> NeurIPS 2026 <b>,</b> ICLR 2027
-                    </li>
-                </ul>
-
-
-
-            </div>
+<body class="selection-gold">
+    <div id="root">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100vh; color: #d4af37; font-family: serif; font-size: 1.5rem; background: #0a0a0a;">
+            Loading FashionChameleon Experience...
         </div>
     </div>
-</body>
 
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+        
+        // Robust Framer Motion access
+        const MotionContainer = window.Motion || window.FramerMotion || {};
+        const motion = MotionContainer.motion || new Proxy({}, {
+            get: (target, prop) => (props) => {
+                const { initial, animate, transition, ...rest } = props;
+                const Tag = prop;
+                return <Tag {...rest} />;
+            }
+        });
+        const AnimatePresence = MotionContainer.AnimatePresence || (({children}) => <>{children}</>);
+
+        // Custom Icon Component to handle Lucide in CDN version
+        const Icon = ({ name, className = "w-5 h-5", ...props }) => {
+            useEffect(() => {
+                if (window.lucide && typeof window.lucide.createIcons === 'function') {
+                    window.lucide.createIcons();
+                }
+            }, [name]);
+            return <i data-lucide={name} className={className} {...props}></i>;
+        };
+
+        function TypewriterPhrase({ text = "" }) {
+            const [displayText, setDisplayText] = useState("");
+            
+            useEffect(() => {
+                let i = 0;
+                setDisplayText("");
+                const timer = setInterval(() => {
+                    if (i < text.length) {
+                        setDisplayText((prev) => text.substring(0, i + 1));
+                        i++;
+                    } else {
+                        clearInterval(timer);
+                    }
+                }, 30);
+                return () => clearInterval(timer);
+            }, [text]);
+
+            return (
+                <div className="flex items-center h-full">
+                    <span className="whitespace-nowrap">{displayText}</span>
+                    <motion.span
+                        animate={{ opacity: [1, 0] }}
+                        transition={{ repeat: Infinity, duration: 0.6, ease: "steps(2)" }}
+                        className="w-1.5 h-3.5 bg-[var(--accent)] ml-1 inline-block"
+                    />
+                </div>
+            );
+        }
+
+        function RotatingText() {
+            const phrases = [
+                "Interactive Video Customization",
+                "Multi-Garment Video Customization",
+                "Long-Video Extrapolation",
+                "Single-Garment Video Customization"
+            ];
+            const [index, setIndex] = useState(0);
+
+            useEffect(() => {
+                const timer = setInterval(() => {
+                    setIndex((prev) => (prev + 1) % phrases.length);
+                }, 4000);
+                return () => clearInterval(timer);
+            }, []);
+
+            return (
+                <div className="flex items-center gap-3 px-3 h-8 border-l border-white/10 ml-4">
+                    <span className="text-[13px] uppercase tracking-[0.2em] font-medium text-white/30 italic">enables</span>
+                    <div className="flex items-center h-full">
+                        <AnimatePresence mode="wait">
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.2 }}
+                                className="text-[11px] font-mono tracking-tight font-semibold text-white/90"
+                            >
+                                <TypewriterPhrase text={phrases[index]} />
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+                </div>
+            );
+        }
+
+        function App() {
+            const videoRef = React.useRef(null);
+
+            useEffect(() => {
+                if (videoRef.current) {
+                    videoRef.current.play().catch(error => {
+                        console.log("Autoplay was prevented:", error);
+                    });
+                }
+            }, []);
+
+            return (
+                <div className="min-h-screen text-white">
+                    {/* Navigation */}
+                    <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-xl border-b border-white/5">
+                        <div className="max-w-[1600px] mx-auto px-8 lg:px-12 h-20 flex items-center justify-between relative">
+                            {/* Left: Brand */}
+                            <div className="flex items-center">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-9 h-9 flex items-center justify-center shrink-0">
+                                        <img 
+                                            src="src/flag.png" 
+                                            alt="Logo" 
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                    <span className="font-serif italic text-2xl tracking-tighter text-[var(--accent)] whitespace-nowrap">FashionChameleon</span>
+                                </div>
+                                <div className="hidden md:block">
+                                    <RotatingText />
+                                </div>
+                            </div>
+
+                            {/* Right: Branding */}
+                            <div className="flex items-center gap-3">
+                                <span className="text-[20px] font-black text-[#ff5000] tracking-tight">Taobao</span>
+                                <div className="w-9 h-9 flex items-center justify-center shrink-0">
+                                    <img 
+                                        src="src/logo.png" 
+                                        alt="Logo" 
+                                        className="w-full h-full object-contain"
+                                        onError={(e) => { e.target.style.display = 'none'; }}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+
+                    {/* Hero Section */}
+                    <section className="relative pt-44 pb-20 px-8">
+                        <div className="max-w-7xl mx-auto text-center relative z-10">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1.5 }}
+                            >
+                                <div className="flex items-center justify-center mb-4">
+                                    <div className="text-[10px] md:text-xs font-serif text-[var(--accent)] italic tracking-[0.4em] uppercase font-bold text-shadow-glow">
+                                        Streaming & Real-Time & Interactive
+                                    </div>
+                                </div>
+
+                                <h1 className="text-5xl md:text-[7.5rem] font-serif leading-none tracking-tighter mb-0 bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+                                    FashionChameleon
+                                </h1>
+
+                                <p className="max-w-4xl mx-auto text-xl md:text-2xl font-serif text-gray-400 leading-relaxed mb-4 tracking-wide italic">
+                                    Towards Real-Time and Interactive Human-Garment Video Customization
+                                </p>
+
+                                {/* Author List */}
+                                <div className="flex flex-col items-center gap-4 mb-6 max-w-4xl mx-auto">
+                                    <div className="flex flex-col items-center gap-1.5 text-[14px] tracking-wide font-medium text-white/90">
+                                        <div className="flex flex-wrap justify-center gap-x-8">
+                                            <span className="cursor-default">Quanjian Song<sup>1,2</sup></span>
+                                            <span className="cursor-default">Yefeng Shen<sup>2</sup></span>
+                                            <span className="cursor-default">Mengting Chen<sup>2,*</sup></span>
+                                            <span className="cursor-default">Hao Sun<sup>2</sup></span>
+                                        </div>
+                                        <div className="flex flex-wrap justify-center gap-x-8">
+                                            <span className="cursor-default">Jinsong Lan<sup>2</sup></span>
+                                            <span className="cursor-default">Xiaoyong Zhu<sup>2</sup></span>
+                                            <span className="cursor-default">Bo Zheng<sup>2</sup></span>
+                                            <span className="cursor-default">Liujuan Cao<sup>1</sup></span>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-12 text-[10px] uppercase tracking-[0.3em] text-gray-400 font-bold">
+                                        <span className="underline underline-offset-8 decoration-[var(--accent)]/40"><sup>1</sup>Xiamen University</span>
+                                        <span className="underline underline-offset-8 decoration-[var(--accent)]/40"><sup>2</sup>Alibaba Group</span>
+                                        <span className="underline underline-offset-8 decoration-[var(--accent)]/40"><sup>*</sup>Project Leader</span>
+                                    </div>
+                                </div>
+
+                                {/* Project Links */}
+                                <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8">
+                                <a
+                                    href="https://arxiv.org/pdf/2605.15824"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 px-7 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-[0.2em] font-black hover:bg-white hover:text-black transition-all duration-500">
+                                    <Icon name="file-text" className="w-4 h-4" />
+                                    Paper
+                                </a>
+
+                                <a
+                                    href="https://github.com/quanjiansong/FashionChameleon"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 px-7 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-[0.2em] font-black hover:bg-white hover:text-black transition-all duration-500">
+                                    <Icon name="github" className="w-4 h-4" />
+                                    GitHub
+                                </a>
+
+                                <a
+                                    href="https://huggingface.co/papers/2605.15824"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 px-7 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-[0.2em] font-black hover:bg-white hover:text-black transition-all duration-500">
+                                    <Icon name="smile" className="w-4 h-4 text-[#FFD21E]" />
+                                    Checkpoint
+                                </a>
+
+                                <a
+                                    href="https://huggingface.co/datasets/QuanjianSong/HGC-Bench"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="group flex items-center gap-3 px-7 py-2 bg-white/5 border border-white/10 rounded-full text-[10px] uppercase tracking-[0.2em] font-black hover:bg-white hover:text-black transition-all duration-500">
+                                    <Icon name="activity" className="w-4 h-4 text-[var(--accent)]" />
+                                    HGC-Bench
+                                </a>
+
+                            </div>
+
+                                {/* Main Visual / Demo */}
+                                <section id="demo" className="mt-8">
+                                    <div className="flex flex-col items-center text-center mb-10">
+                                        <h2 className="text-3xl md:text-4xl font-serif italic text-white tracking-tight">Demo</h2>
+                                        <div className="w-16 h-px bg-[var(--accent)]/40 mt-1"></div>
+                                    </div>
+                                    
+                                    <div className="max-w-[1600px] mx-auto px-4 relative group">
+                                        <div className="absolute -inset-10 bg-[var(--accent)]/5 blur-[120px] rounded-full translate-y-20 opacity-40"></div>
+                                        <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-black border border-white/5 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.8)]">
+                                            <video
+                                                ref={videoRef}
+                                                className="w-full h-full object-cover opacity-80"
+                                                autoPlay
+                                                loop
+                                                playsInline
+                                                controls
+                                            >
+                                                <source src="src/demo.mp4" type="video/mp4" />
+                                                Your browser does not support the video tag.
+                                            </video>
+                                        </div>
+
+                                        {/* TL;DR */}
+                                        <div className="mt-12 text-center max-w-none mx-auto px-6">
+                                            <div className="inline-block px-4 py-1 border border-[var(--accent)]/20 rounded-full mb-4">
+                                                <span className="text-[9px] uppercase tracking-[0.5em] font-black text-[var(--accent)]">TL;DR</span>
+                                            </div>
+                                            <p className="text-lg md:text-xl font-light text-gray-400 italic leading-relaxed tracking-wide">
+                                                We propose <span className="text-white font-medium">FashionChameleon</span>, a <span className="text-[var(--accent)] font-medium">real-time</span> and <span className="text-[var(--accent)] font-medium">interactive</span> framework for human-garment customization in streaming autoregressive video generation. It achieves real-time generation at <span className="text-[var(--accent)] font-bold">23.8 FPS</span> on a single GPU.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </section>
+                            </motion.div>
+                        </div>
+                    </section>
+
+                    {/* Comparison Section */}
+                    <section id="comparison" className="py-24 px-8 lg:px-12 bg-white/2">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="flex flex-col items-center text-center mb-10">
+                                <h2 className="text-3xl md:text-4xl font-serif italic text-white tracking-tight">AI-Generated vs Real Results</h2>
+                                <div className="w-16 h-px bg-[var(--accent)]/40 mt-1"></div>
+                            </div>
+
+                            <div className="max-w-[calc(100%_-_4rem)] mx-auto mb-8">
+                                <div className="relative rounded-lg overflow-hidden bg-black border border-white/10">
+                                    <video src="src/comparison/combined.mp4" className="w-full h-auto block" controls playsInline muted />
+
+                                    {/* Overlay tags for each column */}
+                                    <div className="absolute inset-0 pointer-events-none">
+                                        <div className="flex h-full">
+                                            {['Reference', 'Garment', 'AI Output', 'Real Output'].map((tag, i) => (
+                                                <div key={i} className="w-1/4 flex items-start justify-center pt-4">
+                                                    <span className="bg-black/60 text-white text-[12px] uppercase px-3 py-1 rounded tracking-[0.2em]">{tag}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="text-center text-sm text-gray-400">
+                                <span className="inline-block px-3 py-2 border border-white/10 rounded-full">Comparison: Fidelity vs Flexibility</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Highlights Section */}
+                    <section id="highlights" className="py-24 px-8 lg:px-12 bg-white/[0.02]">
+                        <div className="max-w-6xl mx-auto">
+                            <div className="flex flex-col items-center text-center mb-16">
+                                <h2 className="text-3xl md:text-4xl font-serif italic text-white tracking-tight">Highlights</h2>
+                                <div className="w-16 h-px bg-[var(--accent)]/40 mt-1"></div>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-2">
+                                {[
+                                    { title: "Interactive Customization", icon: "mouse-pointer-2" },
+                                    { title: <span>Gradient-Reweighted <span className="group-hover:text-gray-400">DMD</span></span>, icon: "cpu" },
+                                    { title: "Real-Time Generation", icon: "zap" }
+                                ].map((item, i) => (
+                                    <div key={i} className="flex flex-col items-center gap-6 text-center group">
+                                        <div className="w-16 h-16 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center group-hover:border-[var(--accent)]/40 group-hover:bg-[var(--accent)]/5 transition-all duration-700 shadow-xl">
+                                            <Icon name={item.icon} className="w-7 h-7 text-[var(--accent)] opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+                                        </div>
+                                        <h3 className="text-xl md:text-2xl font-serif italic text-gray-400 group-hover:text-[var(--accent)] transition-colors duration-500 tracking-tight leading-tight">
+                                            {item.title}
+                                        </h3>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="relative group max-w-5xl mx-auto bg-[#0a0a0a] border border-white/10 p-2 rounded-2xl overflow-hidden shadow-2xl">
+                                <img
+                                    src="src/intro.png"
+                                    alt="Introduction Figure"
+                                    className="w-full opacity-80 group-hover:opacity-100 transition-all duration-1000"
+                                    onError={(e) => { e.target.src = 'https://picsum.photos/seed/fashion-intro/1600/600'; }}
+                                />
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Abstract Section */}
+                    <section id="abstract" className="py-24 px-8 lg:px-12 bg-white/2">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="flex flex-col items-center text-center mb-4">
+                                <h2 className="text-3xl md:text-4xl font-serif italic text-white tracking-tight">Abstract</h2>
+                                <div className="w-16 h-px bg-[var(--accent)]/40 mt-1"></div>
+                            </div>
+                            <div className="text-lg text-gray-400 font-light leading-[1.8] text-justify mt-8">
+                                <p>
+                                    Human-centric video customization, particularly at the garment level, has shown significant commercial value. However, existing approaches cannot support low-latency and interactive garment control, which is crucial for applications such as e-commerce and content creation.
+                                    This paper studies how to achieve interactive multi-garment video customization while preserving motion coherence using only single-garment video data.
+                                    We present <strong className="text-white font-medium">FashionChameleon</strong>, a real-time and interactive framework for human-garment customization in autoregressive video generation, where users can interactively switch garment during generation.
+                                    FashionChameleon consists of three key techniques:
+                                    (i) Instead of training on multi-garment video data, we train a <strong className="text-white font-medium">Teacher Model with In-Context Learning</strong> on a single reference–garment pair. By retaining the <em>image-to-video training paradigm</em> while <em>enforcing a mismatch between the reference and garment image</em>, the model is encouraged to implicitly preserve coherence during single-garment switching.
+                                    (ii) To achieve consistency and efficiency during generation, we introduce <strong className="text-white font-medium">Streaming Distillation with In-Context Learning</strong>, which fine-tunes the model with <em>in-context teacher forcing</em> and improves extrapolation consistency via <em>gradient-reweighted distribution matching distillation</em>.
+                                    (iii) To extend the model for interactive multi-garment video customization, we propose <strong className="text-white font-medium">Training-Free KV Cache Rescheduling</strong>, which includes <em>garment KV refresh</em>, <em>historical KV withdraw</em>, and <em>reference KV disentangle</em> to achieve garment switching while preserving motion coherence.
+                                    Our FashionChameleon uniquely supports interactive customization and consistent long-video extrapolation, while achieving real-time generation at 23.8 FPS on a single GPU, 30-180× faster than existing baselines.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Methodology */}
+                    <section id="method" className="py-24 px-12 relative">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="flex flex-col items-center text-center mb-10">
+                                <h2 className="text-3xl md:text-4xl font-serif italic text-white tracking-tight">Methodology</h2>
+                                <div className="w-16 h-px bg-[var(--accent)]/40 mt-1"></div>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 mb-4">
+                                { [
+                                    { title: <>I. Teacher Model with<br/>In-Context Learning</> },
+                                    { title: <>II. Streaming Distillation with<br/>In-Context Learning</> },
+                                    { title: "III. Training-Free KV Cache Rescheduling" }
+                                ].map((pillar, i) => (
+                                    <div key={i} className="p-8 bg-white/[0.06] border border-white/10 rounded-3xl group hover:border-[var(--accent)]/40 transition-all duration-1000 text-center flex flex-col justify-center items-center min-h-[180px]">
+                                        <h4 className="text-xl md:text-2xl font-serif text-white group-hover:text-[var(--accent)] transition-colors duration-500 leading-tight tracking-tight">{pillar.title}</h4>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="relative group max-w-6xl mx-auto bg-[#0a0a0a] border border-white/10 p-2 rounded-2xl overflow-hidden shadow-2xl">
+                                <img
+                                    src="src/overall_pipeline.png"
+                                    alt="System Architecture"
+                                    className="w-full opacity-70 group-hover:opacity-100 transition-all duration-1000"
+                                    onError={(e) => { e.target.src = 'https://picsum.photos/seed/fashion-arch/1600/700'; }}
+                                />
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Data Pipeline Section */}
+                    <section id="pipeline" className="py-24 px-12 bg-white/2">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="flex flex-col items-center text-center mb-10">
+                                <h2 className="text-3xl md:text-4xl font-serif italic text-white tracking-tight">Data Pipeline</h2>
+                                <div className="w-16 h-px bg-[var(--accent)]/40 mt-1"></div>
+                            </div>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
+                                {[
+                                    { title: "General Coarse-to-Fine Video Filtering" },
+                                    { title: "Static-Dynamic Video Captioning" },
+                                    { title: "Fine-Grained Garment Images Extraction" },
+                                    { title: "Adaptive Reference Images Construction" }
+                                ].map((stage, i) => (
+                                    <div key={i} className="p-8 bg-white/[0.04] border border-white/10 rounded-2xl group hover:border-[var(--accent)]/30 transition-all duration-700 flex flex-col justify-center items-center text-center min-h-[180px]">
+                                        <div className="text-[var(--accent)] text-xs font-black tracking-[0.2em] mb-4 opacity-50 uppercase">Stage {i+1}</div>
+                                        <h3 className="text-lg font-serif text-white italic group-hover:text-[var(--accent)] transition-colors duration-500 leading-tight">{stage.title}</h3>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div className="mt-4 relative group max-w-6xl mx-auto bg-[#0a0a0a] border border-white/10 p-2 rounded-2xl overflow-hidden shadow-2xl">
+                                <img
+                                    src="src/data_pipeline.png"
+                                    alt="Data Pipeline Diagram"
+                                    className="w-full opacity-70 group-hover:opacity-100 transition-all duration-1000"
+                                    onError={(e) => { e.target.src = 'https://picsum.photos/seed/fashion-data/1600/700'; }}
+                                />
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Citation Section */}
+                    <section id="bibtex" className="py-24 px-8 text-center bg-black/40">
+                        <div className="max-w-4xl mx-auto">
+                            <div className="flex flex-col items-center text-center mb-9">
+                                <h2 className="text-3xl md:text-4xl font-serif italic text-white tracking-tight">Citation</h2>
+                                <div className="w-16 h-px bg-[var(--accent)]/40 mt-1"></div>
+                            </div>
+                            <div className="bg-white/[0.04] p-12 text-left border border-white/20 rounded-3xl relative group overflow-hidden shadow-2xl hover:border-[var(--accent)]/30 transition-all duration-700">
+                                <pre className="text-gray-500 font-mono text-xs md:text-sm leading-relaxed overflow-x-auto">
+{`@article{song2026fashionchameleon,
+  title={FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization},
+  author={Song, Quanjian and Shen, Yefeng and Chen, Mengting and Sun, Hao and Lan, Jinsong and Zhu, Xiaoyong and Zheng, Bo and Cao, Liujuan},
+  journal={arXiv preprint arXiv:2605.15824},
+  year={2026}
+}`}
+                                </pre>
+                                <button 
+                                    onClick={(e) => {
+                                        const text = `@article{song2026fashionchameleon,
+  title={FashionChameleon: Towards Real-Time and Interactive Human-Garment Video Customization},
+  author={Song, Quanjian and Shen, Yefeng and Chen, Mengting and Sun, Hao and Lan, Jinsong and Zhu, Xiaoyong and Zheng, Bo and Cao, Liujuan},
+  journal={arXiv preprint arXiv:2605.15824},
+  year={2026}
+}`;
+                                        navigator.clipboard.writeText(text).then(() => {
+                                            const btn = e.currentTarget;
+                                            const originalText = btn.innerText;
+                                            btn.innerText = "Copied!";
+                                            setTimeout(() => btn.innerText = originalText, 2000);
+                                        });
+                                    }}
+                                    className="mt-12 w-full py-4 bg-white/5 border border-white/10 hover:bg-white hover:text-black transition-all duration-700 uppercase tracking-[0.3em] font-black text-[9px]"
+                                >
+                                    Copy to Clipboard
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* Footer */}
+                    <footer className="py-24 px-12 border-t border-white/5 bg-[#050505]">
+                        <div className="max-w-[1600px] mx-auto text-center flex flex-col gap-4">
+                            <p className="text-[10px] uppercase tracking-[0.4em] font-black text-gray-500">
+                                Copyright © 2026 FashionChameleon Team. All rights reserved.
+                            </p>
+                            <p className="text-[10px] uppercase tracking-[0.2em] font-medium text-gray-500">
+                                This homepage design is inspired by <a href="https://correr-zhou.github.io/OmniShow/" target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-[0.4em] font-black text-gray-500">OmniShow</a>.
+                            </p>
+                        </div>
+                    </footer>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
 </html>
